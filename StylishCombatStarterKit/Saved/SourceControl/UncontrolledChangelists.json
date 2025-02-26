@@ -1,0 +1,39 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/StarterContent/Architecture/Floor_400x400.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/StylishCombatKit/AI/BP_AI_Manager.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/StarterContent/Blueprints/Blueprint_CeilingLight.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/BotImportTest/IK_MannyRetarfet.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/BotImportTest/IK_Manny.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/StylishCombatKit/Maps/TestMap.umap",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/StylishCombatKit/Characters/Mannequin/Mesh/UE4_Mannequin_Skeleton.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/BotImportTest/botters_015_PhysicsAsset.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/BotImportTest/botters_017_Anim.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/BotImportTest/Material.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/BotImportTest/Ucupaint_Base.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/BotImportTest/Ucupaint_Base1.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/BotImportTest/Ucupaint_Face_Color.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/BotImportTest/Base_Color.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/BotImportTest/Face.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/BotImportTest/Base_Undercolor.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/BotImportTest/botters_015.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/BotImportTest/Action.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/BotImportTest/hunched.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/BotImportTest/hunched_alerted.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/BotImportTest/metarigAction.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/BotImportTest/botters_017_Skeleton.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/BotImportTest/botters_017_PhysicsAsset.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/BotImportTest/botters_017.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/BotImportTest/botters_015_Skeleton.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/BotImportTest/IK_Botter.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/BotImportTest/IK_Botters.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/BotImportTest/IK_Botter_To_Manny.uasset"
+			]
+		}
+	]
+}
