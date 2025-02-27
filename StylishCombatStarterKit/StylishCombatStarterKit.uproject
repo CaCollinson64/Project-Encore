@@ -14,5 +14,8 @@
 				"Mac"
 			]
 		}
+	],
+	"AdditionalPluginDirectories": [
+		"Plugins"
 	]
 }
