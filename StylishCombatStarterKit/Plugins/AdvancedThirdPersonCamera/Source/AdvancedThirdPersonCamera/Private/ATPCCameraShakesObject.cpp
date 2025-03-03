@@ -4,7 +4,6 @@
 
 #include "ATPCCameraComponent.h"
 #include "ATPCCameraModeDataAsset.h"
-#include "LegacyCameraShake.h"
 #include "Camera/PlayerCameraManager.h"
 #include "Engine/World.h"
 #include "TimerManager.h"
@@ -57,11 +56,13 @@ TPair<bool, float> UATPCCameraShakesObject::GetCameraShakeDuration(TSubclassOf<U
 	if (cameraShakeDuration.IsCustom())
 	{
 		ShakeDuration shakeDuration(false, 0.f);
-		if (auto matineeCameraShake = Cast<ULegacyCameraShake>(CameraShake.GetDefaultObject()))
+		/*
+		if (auto matineeCameraShake = Cast<UCameraShake>(CameraShake.GetDefaultObject()))
 		{
 			shakeDuration.Key = matineeCameraShake->OscillationDuration < 0.f;
 			shakeDuration.Value = matineeCameraShake->OscillationDuration;
 		}
+		*/
 		return shakeDuration;
 	}
 	else if (cameraShakeDuration.IsFixed())

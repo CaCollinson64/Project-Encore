@@ -20,6 +20,18 @@
 				"Linux",
 				"Mac"
 			]
+		},
+		{
+			"Name": "GameplayAbilities",
+			"Enabled": true
+		},
+		{
+			"Name": "TargetingSystem",
+			"Enabled": true
+		},
+		{
+			"Name": "MotionWarping",
+			"Enabled": true
 		}
 	],
 	"AdditionalPluginDirectories": [
