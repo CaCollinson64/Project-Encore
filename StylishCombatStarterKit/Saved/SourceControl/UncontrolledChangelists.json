@@ -5,6 +5,9 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
+				"D:/Git/Project-Encore/StylishCombatStarterKit/Content/StarterContent/HDRI/HDRI_Epic_Courtyard_Daylight.uasset",
+				"D:/Git/Project-Encore/StylishCombatStarterKit/Content/CharacterAssets/SixImportTest/M_PinkArmor.uasset",
+				"D:/Git/Project-Encore/StylishCombatStarterKit/Content/CharacterAssets/SixImportTest/Six_011.uasset",
 				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/StylishCombatKit/AI/BP_AI_Manager.uasset",
 				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/StylishCombatKit/Maps/TestMap.umap",
 				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/StylishCombatKit/Characters/Mannequin/Mesh/UE4_Mannequin_Skeleton.uasset",
