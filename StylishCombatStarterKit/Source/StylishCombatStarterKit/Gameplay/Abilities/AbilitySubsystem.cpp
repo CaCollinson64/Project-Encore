@@ -64,7 +64,7 @@ void UAbilitySubsystem::OnHealthAttributeChanged(const FOnAttributeChangeData& O
 
 void UAbilitySubsystem::StartAbilityByInput(EAbilityInput AbilityInput)
 {
-        AbilityLocalInputPressed(static_cast<int32>(AbilityInput));
+    AbilityLocalInputPressed(static_cast<int32>(AbilityInput));
 }
 
 UEncoreAbilities* UAbilitySubsystem::GetAbilityByInput(EAbilityInput AbilityInput)

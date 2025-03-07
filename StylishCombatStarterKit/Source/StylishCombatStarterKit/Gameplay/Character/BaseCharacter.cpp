@@ -12,6 +12,8 @@
 #include "InputActionValue.h"
 #include "Net/UnrealNetwork.h"
 #include "StylishCombatStarterKit/Gameplay/Abilities/Attributes/StandardAttributeSet.h"
+#include "StylishCombatStarterKit/Gameplay/Inputs/CharacterProfile.h"
+#include "StylishCombatStarterKit/Gameplay/Inputs/ComboChainComponent.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
@@ -80,6 +82,10 @@ ABaseCharacter::ABaseCharacter()
 	GetCharacterMovement()->BrakingDecelerationWalking = 2000.f;
 	GetCharacterMovement()->BrakingDecelerationFalling = 1500.0f;
 
+	// Create the DodgeComponent
+	DodgeComponent = CreateDefaultSubobject<UDodgeComponent>(TEXT("DodgeComponent"));
+	ComboChainComp   = CreateDefaultSubobject<UComboChainComponent>(TEXT("ComboChainComponent"));
+
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named ThirdPersonCharacter (to avoid direct content references in C++)
 }
@@ -113,6 +119,14 @@ void ABaseCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 		// Moving
 		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &ABaseCharacter::Move);
 
+		
+		// Bind the Dodge input
+		if (DodgeAction)
+		{
+			// Typically, dodge triggers the moment you press the button 
+			// so we use ETriggerEvent::Started or Completed.
+			EnhancedInputComponent->BindAction(DodgeAction, ETriggerEvent::Started, this, &ABaseCharacter::HandleDodge);
+		}
 		// Looking
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &ABaseCharacter::Look);
 		for (const auto binding : AbilitySubsystem->AbilitiesInputBindings.Bindings)
@@ -143,12 +157,43 @@ void ABaseCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 				}
 			default: ;
 			}
+
+
 		}
+
+					
+		// --- NEW: Bind combos from the CharacterProfile (if any) ---
+		BindComboInputsFromProfile(EnhancedInputComponent);
 	}
 	else
 	{
 		UE_LOG(LogTemplateCharacter, Error, TEXT("'%s' Failed to find an Enhanced Input component! This template is built to use the Enhanced Input system. If you intend to use the legacy system, then you will need to update this C++ file."), *GetNameSafe(this));
 	}
+}
+
+void ABaseCharacter::HandleDodge()
+{
+	if (!DodgeComponent) return;
+
+	// Get movement input to decide a dodge direction
+	// (Alternatively, just dodge in the direction the character is facing.)
+	FVector DodgeDir = GetActorForwardVector(); // default forward
+
+	// If you want directional dodge from stick input, gather it:
+	if (Controller && GetCharacterMovement())
+	{
+		// For example, you might use your MoveAction's Vector2D or store 
+		// the last movement input. Here's a quick snippet:
+		
+		const FVector InputVector = GetLastMovementInputVector();
+		if (!InputVector.IsNearlyZero())
+		{
+			DodgeDir = InputVector.GetSafeNormal();
+		}
+	}
+
+	// Pass the direction to the DodgeComponent
+	DodgeComponent->Dodge(DodgeDir);
 }
 
 void ABaseCharacter::Move(const FInputActionValue& Value)
@@ -184,5 +229,39 @@ void ABaseCharacter::Look(const FInputActionValue& Value)
 		// add yaw and pitch input to controller
 		AddControllerYawInput(LookAxisVector.X);
 		AddControllerPitchInput(LookAxisVector.Y);
+	}
+}
+
+void ABaseCharacter::BindComboInputsFromProfile(UEnhancedInputComponent* EnhancedInputComp)
+{
+	// If we have a ComboChainComp, see if it has a CharacterProfile
+	if (ComboChainComp && ComboChainComp->CharacterProfile)
+	{
+		UCharacterProfile* Profile = ComboChainComp->CharacterProfile;
+		
+		// For each entry in InputRegister (which maps EComboInputType -> UInputAction)
+		for (const TPair<EComboInputType, UInputAction*>& Pair : Profile->InputRegister)
+		{
+			if (Pair.Value) // ensure it’s not null
+			{
+				// We'll bind to ETriggerEvent::Started for a typical "press"
+				EnhancedInputComp->BindAction(
+					Pair.Value,
+					ETriggerEvent::Started,
+					this,
+					&ABaseCharacter::OnComboActionTriggered,
+					Pair.Key // pass the EComboInputType as a payload
+				);
+			}
+		}
+	}
+}
+
+void ABaseCharacter::OnComboActionTriggered(EComboInputType InputType)
+{
+	// Pass the input to the ComboChainComp
+	if (ComboChainComp)
+	{
+		ComboChainComp->OnComboInput(InputType);
 	}
 }

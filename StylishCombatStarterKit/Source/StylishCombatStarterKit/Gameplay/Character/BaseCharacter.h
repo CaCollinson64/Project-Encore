@@ -6,8 +6,11 @@
 #include "GameFramework/Character.h"
 #include "Logging/LogMacros.h"
 #include "StylishCombatStarterKit/Gameplay/Abilities/AbilitySubsystem.h"
+#include "StylishCombatStarterKit/Gameplay/Movement/DodgeComponent.h"
 #include "BaseCharacter.generated.h"
 
+enum class EComboInputType : uint8;
+class UComboChainComponent;
 class USpringArmComponent;
 class UCameraComponent;
 class UInputMappingContext;
@@ -22,6 +25,18 @@ class STYLISHCOMBATSTARTERKIT_API ABaseCharacter : public ACharacter
 	GENERATED_BODY()
 
 public:
+	
+	/** Our custom Dodge Component. */
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components")
+	UDodgeComponent* DodgeComponent;
+
+	/** The InputAction for dodging (assigned in Blueprint or DataAsset). */
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Input")
+	UInputAction* DodgeAction;
+
+	// Input handler for dodge
+	void HandleDodge();
+
 	virtual void BeginPlay() override;
 	void AbilityInputBindingPressedHandler(EAbilityInput abilityInput);
 	void AbilityInputBindingReleasedHandler(EAbilityInput abilityInput);
@@ -49,6 +64,17 @@ public:
 	/** Look Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* LookAction;
+
+	/** Our new Combo Component. */
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components")
+	UComboChainComponent* ComboChainComp;
+	// --- COMBO BINDING ---
+	/** Called when we want to pass a combo input to the ComboChainComponent. */
+	void OnComboActionTriggered(EComboInputType InputType);
+
+private:
+	/** Helper to bind all the combos from the CharacterProfile to input. */
+	void BindComboInputsFromProfile(UEnhancedInputComponent* EnhancedInputComp);
 
 public:
 	ABaseCharacter();
