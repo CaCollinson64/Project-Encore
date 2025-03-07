@@ -14,9 +14,10 @@ enum class EComboInputType : uint8
 {
 	Light UMETA(DisplayName="Light"),
 	Heavy UMETA(DisplayName="Heavy"),
-	Special UMETA(DisplayName="Special"),
-	Aerial UMETA(DisplayName="Aerial"),
-	// etc...
+	Ranged UMETA(DisplayName="Ranged"),
+	Special1 UMETA(DisplayName="Special 1"),
+	Special2 UMETA(DisplayName="Special 2"),
+	Jump UMETA(DisplayName="Jump / In Air"),
 };
 
 /**
