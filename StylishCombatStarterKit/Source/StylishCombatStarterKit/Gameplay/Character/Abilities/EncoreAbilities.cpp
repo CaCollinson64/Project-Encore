@@ -3,12 +3,12 @@
 
 #include "EncoreAbilities.h"
 
-#include "StylishCombatStarterKit/Gameplay/Character/BaseCharacter.h"
+#include "StylishCombatStarterKit/Gameplay/Character/BaseCharacter/BaseCharacter.h"
 
 
 void UEncoreAbilities::ActivateAbility(const FGameplayAbilitySpecHandle Handle,
-                                        const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo,
-                                        const FGameplayEventData* TriggerEventData)
+                                       const FGameplayAbilityActorInfo* ActorInfo, const FGameplayAbilityActivationInfo ActivationInfo,
+                                       const FGameplayEventData* TriggerEventData)
 {
 	Super::ActivateAbility(Handle, ActorInfo, ActivationInfo, TriggerEventData);
 

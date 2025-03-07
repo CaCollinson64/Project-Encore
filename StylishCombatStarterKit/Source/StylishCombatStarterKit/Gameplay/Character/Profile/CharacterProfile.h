@@ -3,9 +3,9 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "ComboTypes.h"
 #include "InputAction.h"
 #include "Engine/DataAsset.h"
+#include "StylishCombatStarterKit/Gameplay/Character/Inputs/ComboTypes.h"
 #include "CharacterProfile.generated.h"
 
 

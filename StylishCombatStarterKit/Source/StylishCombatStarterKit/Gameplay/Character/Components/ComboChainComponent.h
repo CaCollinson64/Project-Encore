@@ -2,10 +2,9 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "ComboTypes.h"           // Contains FComboStep, FComboChain, EComboInputType
-#include "CharacterProfile.h"     // So we can reference UCharacterProfile
 #include "HitComponent.h"
-#include "InteroperableComponent.h"
+#include "BaseClasses/InteroperableComponent.h"
+#include "StylishCombatStarterKit/Gameplay/Character/Profile/CharacterProfile.h"
 #include "ComboChainComponent.generated.h"
 
 

@@ -5,8 +5,8 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "Logging/LogMacros.h"
-#include "StylishCombatStarterKit/Gameplay/Abilities/AbilitySubsystem.h"
-#include "StylishCombatStarterKit/Gameplay/Movement/DodgeComponent.h"
+#include "StylishCombatStarterKit/Gameplay/Character/Abilities/AbilitySubsystem.h"
+#include "StylishCombatStarterKit/Gameplay/Character/Components/DodgeComponent.h"
 #include "BaseCharacter.generated.h"
 
 enum class EComboInputType : uint8;

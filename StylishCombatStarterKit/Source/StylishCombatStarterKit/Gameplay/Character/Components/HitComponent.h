@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "InteroperableComponent.h"
+#include "BaseClasses/InteroperableComponent.h"
 #include "Components/ActorComponent.h"
 #include "HitComponent.generated.h"
 

@@ -1,7 +1,7 @@
 ﻿#pragma once
 
 #include "CoreMinimal.h"
-#include "StylishCombatStarterKit/Gameplay/Abilities/EncoreAbilities.h"
+#include "StylishCombatStarterKit/Gameplay/Character/Abilities/EncoreAbilities.h"
 #include "ComboTypes.generated.h"
 
 

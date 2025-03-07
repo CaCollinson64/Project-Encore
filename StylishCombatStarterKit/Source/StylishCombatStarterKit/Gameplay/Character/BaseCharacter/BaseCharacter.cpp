@@ -11,9 +11,7 @@
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
 #include "Net/UnrealNetwork.h"
-#include "StylishCombatStarterKit/Gameplay/Abilities/Attributes/StandardAttributeSet.h"
-#include "StylishCombatStarterKit/Gameplay/Inputs/CharacterProfile.h"
-#include "StylishCombatStarterKit/Gameplay/Inputs/ComboChainComponent.h"
+#include "StylishCombatStarterKit/Gameplay/Character/Components/ComboChainComponent.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 

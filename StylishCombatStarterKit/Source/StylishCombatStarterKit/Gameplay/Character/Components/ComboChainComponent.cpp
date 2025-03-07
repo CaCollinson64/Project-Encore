@@ -1,11 +1,10 @@
 ﻿#include "ComboChainComponent.h"
-#include "CharacterProfile.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Engine/World.h"
 #include "TimerManager.h"
 #include "Kismet/GameplayStatics.h"
 #include "AbilitySystemComponent.h"
-#include "StylishCombatStarterKit/Gameplay/Abilities/AbilitySubsystem.h"
+#include "StylishCombatStarterKit/Gameplay/Character/Abilities/AbilitySubsystem.h"
 
 UComboChainComponent::UComboChainComponent()
 {
