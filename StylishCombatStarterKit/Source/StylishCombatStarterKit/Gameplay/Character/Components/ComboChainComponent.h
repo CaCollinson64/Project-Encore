@@ -15,7 +15,7 @@ class UAbilitySubsystem;
  * Attaches to a Character to manage multiple combo chains,
  * track current steps, and activate abilities from each step.
  */
-UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent), BlueprintType, Blueprintable)
 class STYLISHCOMBATSTARTERKIT_API UComboChainComponent : public UInteroperableComponent
 {
 	GENERATED_BODY()

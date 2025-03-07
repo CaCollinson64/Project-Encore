@@ -7,7 +7,7 @@
 #include "InteroperableComponent.generated.h"
 
 
-UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent), BlueprintType, Blueprintable)
 class STYLISHCOMBATSTARTERKIT_API UInteroperableComponent : public UActorComponent
 {
 	GENERATED_BODY()

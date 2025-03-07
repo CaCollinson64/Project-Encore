@@ -8,7 +8,7 @@
 #include "HitComponent.generated.h"
 
 
-UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent), BlueprintType, Blueprintable)
 class STYLISHCOMBATSTARTERKIT_API UHitComponent : public UInteroperableComponent
 {
 	GENERATED_BODY()

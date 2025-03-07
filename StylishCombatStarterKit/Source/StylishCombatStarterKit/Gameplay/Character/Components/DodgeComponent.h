@@ -4,7 +4,7 @@
 #include "Components/ActorComponent.h"
 #include "DodgeComponent.generated.h"
 
-UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
+UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent), BlueprintType, Blueprintable)
 class STYLISHCOMBATSTARTERKIT_API UDodgeComponent : public UActorComponent
 {
 	GENERATED_BODY()
