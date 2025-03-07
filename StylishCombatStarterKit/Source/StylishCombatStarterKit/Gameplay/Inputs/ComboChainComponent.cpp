@@ -101,9 +101,30 @@ void UComboChainComponent::OnComboInput(EComboInputType InputType)
 
 void UComboChainComponent::ResetCombo()
 {
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("ResetCombo"));
 	CurrentChainIndex = -1;
 	CurrentStepIndex = -1;
 }
+
+void UComboChainComponent::TriggerExit()
+{
+	if (CurrentChainIndex < 0 || CurrentStepIndex < 0)
+		return;
+
+	const FComboStep& Step = ComboChains[CurrentChainIndex].Steps[CurrentStepIndex];
+
+	// If we're mid-chain, see if we can go to the next step
+	if (!Step.bCanEndWithInputCancelled)
+		return;
+
+	if (Step.bStopMontageWithInputCancelled)
+		OwnerBaseCharacter->StopAnimMontage(Step.AnimationMontage);
+
+
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("TriggerExit"));
+	ResetCombo();
+}
+
 void UComboChainComponent::StartChain(int32 ChainIndex, int32 StepIndex)
 {
 	CurrentChainIndex = ChainIndex;
@@ -117,12 +138,15 @@ void UComboChainComponent::StartComboStep(int32 StepIndex)
 	
 	const FComboStep& StepData = ComboChains[CurrentChainIndex].Steps[StepIndex];
 
+	// Shut down the combo if you haven't unlocked it yet.
+	if (CharacterRank < StepData.UnlockAtRank) return;
+	
 	// 1) Movement / effects
 	ApplyComboStepEffects(StepData);
 
 	// 2) Possibly play an animation montage
 	//    (You can do that in your character or here, using an AnimInstance + Montage.)
-
+	OwnerBaseCharacter->bInvincible = StepData.bGrantsIFrames;
 	OwnerBaseCharacter->PlayAnimMontage(StepData.AnimationMontage, StepData.PlayRate, StepData.StartSectionName);
 	/*
 	// 3) Activate the ability (if any) from StepData

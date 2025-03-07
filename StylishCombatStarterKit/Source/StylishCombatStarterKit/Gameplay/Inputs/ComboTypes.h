@@ -32,6 +32,14 @@ struct FComboStep
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Input")
 	EComboInputType InputType;
 
+	// This will cancel the montage and END animation
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Input")
+	bool bCanEndWithInputCancelled = false;
+
+	// This will cancel the montage and END animation
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Input")
+	bool bStopMontageWithInputCancelled = false;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Animation")
 	UAnimMontage* AnimationMontage;
 
@@ -39,7 +47,11 @@ struct FComboStep
 	FName StartSectionName;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Animation")
-	float PlayRate;
+	float PlayRate = 1.0f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Animation")
+	int UnlockAtRank = 0;
+
 	/** How long after we start this step the player can press the next input to continue. */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Timing")
 	float ComboWindow = 0.5f;
@@ -74,6 +86,6 @@ struct FComboChain
 	FName ChainName;
 
 	/** Steps that define this combo chain. Each step can branch to another via NextStepsByInput. */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Steps")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Steps", meta=(TitleProperty="InputType"))
 	TArray<FComboStep> Steps;
 };

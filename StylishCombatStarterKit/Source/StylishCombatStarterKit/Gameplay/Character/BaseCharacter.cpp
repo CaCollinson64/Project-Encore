@@ -252,6 +252,14 @@ void ABaseCharacter::BindComboInputsFromProfile(UEnhancedInputComponent* Enhance
 					&ABaseCharacter::OnComboActionTriggered,
 					Pair.Key // pass the EComboInputType as a payload
 				);
+
+				EnhancedInputComp->BindAction(
+				Pair.Value,
+				ETriggerEvent::Completed,
+				this,
+				&ABaseCharacter::OnComboActionCompleted,
+				Pair.Key // pass the EComboInputType as a payload
+			);
 			}
 		}
 	}
@@ -263,5 +271,14 @@ void ABaseCharacter::OnComboActionTriggered(EComboInputType InputType)
 	if (ComboChainComp)
 	{
 		ComboChainComp->OnComboInput(InputType);
+	}
+}
+
+void ABaseCharacter::OnComboActionCompleted(EComboInputType InputType)
+{
+	// Pass the input to the ComboChainComp
+	if (ComboChainComp)
+	{
+		ComboChainComp->TriggerExit();
 	}
 }

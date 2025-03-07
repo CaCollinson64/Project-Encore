@@ -71,7 +71,11 @@ public:
 	// --- COMBO BINDING ---
 	/** Called when we want to pass a combo input to the ComboChainComponent. */
 	void OnComboActionTriggered(EComboInputType InputType);
+	void OnComboActionCompleted(EComboInputType InputType);
 
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Health")
+	bool bInvincible = false;
 private:
 	/** Helper to bind all the combos from the CharacterProfile to input. */
 	void BindComboInputsFromProfile(UEnhancedInputComponent* EnhancedInputComp);

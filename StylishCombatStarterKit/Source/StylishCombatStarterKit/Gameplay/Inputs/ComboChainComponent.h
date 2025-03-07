@@ -26,9 +26,15 @@ public:
 	UFUNCTION(BlueprintCallable, Category="Combo")
 	void OnComboInput(EComboInputType InputType);
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category="Settings")
+	int CharacterRank;
+
 	/** Stop the current combo outright (e.g. player is hit or time expires). */
 	UFUNCTION(BlueprintCallable, Category="Combo")
 	void ResetCombo();
+
+	UFUNCTION(BlueprintCallable, Category="Combo")
+	void TriggerExit();
 	/** DataAsset that defines the combos and input mapping. */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Settings")
 	UCharacterProfile* CharacterProfile;
