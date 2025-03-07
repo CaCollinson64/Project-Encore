@@ -34,7 +34,7 @@ public:
 	void ReduceHealth(float damage);
 
 	UFUNCTION( BlueprintNativeEvent )
-	virtual void Death();
+	void Death();
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Hit")
 	bool bIsPerformingHitAnimation = false;
