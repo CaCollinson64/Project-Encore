@@ -4,21 +4,24 @@
 #include "Engine/World.h"
 #include "TimerManager.h"
 #include "Kismet/GameplayStatics.h"
-#include "StylishCombatStarterKit/Gameplay/Character/BaseCharacter.h"
-#include "StylishCombatStarterKit/Gameplay/Abilities/AbilitySubsystem.h"
 #include "AbilitySystemComponent.h"
+#include "StylishCombatStarterKit/Gameplay/Abilities/AbilitySubsystem.h"
 
 UComboChainComponent::UComboChainComponent()
 {
 	PrimaryComponentTick.bCanEverTick = bEnableTick;
 }
 
+void UComboChainComponent::FindOwner()
+{
+	Super::FindOwner();
+	OwnerAbilitySystem = Cast<UAbilitySubsystem>(Owner->GetComponentByClass(UAbilitySubsystem::StaticClass()));
+	OwnerHitComponent = Cast<UHitComponent>(Owner->GetComponentByClass(UHitComponent::StaticClass()));
+}
+
 void UComboChainComponent::BeginPlay()
 {
 	Super::BeginPlay();
-
-	// Cache our owning BaseCharacter for convenience
-	OwnerBaseCharacter = Cast<ABaseCharacter>(GetOwner());
 
 	// Copy combos from the assigned CharacterProfile into local array
 	if (CharacterProfile)
@@ -114,11 +117,24 @@ void UComboChainComponent::TriggerExit()
 	const FComboStep& Step = ComboChains[CurrentChainIndex].Steps[CurrentStepIndex];
 
 	// If we're mid-chain, see if we can go to the next step
-	if (!Step.bCanEndWithInputCancelled)
+	if (!Step.bCanEndComboInputReleased)
 		return;
 
-	if (Step.bStopMontageWithInputCancelled)
-		OwnerBaseCharacter->StopAnimMontage(Step.AnimationMontage);
+	if (Step.bStopExecutionWithInputCancelled)
+	{
+		if (Step.ExecutionType == EComboExecutionType::AnimationMontageBased)
+		{
+			StopMontage(Step.AnimationMontage);
+		}
+		else if (Step.ExecutionType == EComboExecutionType::AbilityBased)
+		{
+			auto LoadedAbility = Cast<UEncoreAbilities>(Step.Ability.LoadSynchronous());
+			if (Owner && OwnerAbilitySystem && Step.Ability)
+			{
+				OwnerAbilitySystem->CancelAbility(LoadedAbility);
+			}
+		}
+	}
 
 
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("TriggerExit"));
@@ -133,9 +149,11 @@ void UComboChainComponent::StartChain(int32 ChainIndex, int32 StepIndex)
 
 void UComboChainComponent::StartComboStep(int32 StepIndex)
 {
+	if (Owner == nullptr) return;
+
 	CurrentStepIndex = StepIndex;
 	StepStartTime = GetWorld()->GetTimeSeconds();
-	
+
 	const FComboStep& StepData = ComboChains[CurrentChainIndex].Steps[StepIndex];
 
 	// Shut down the combo if you haven't unlocked it yet.
@@ -146,19 +164,23 @@ void UComboChainComponent::StartComboStep(int32 StepIndex)
 
 	// 2) Possibly play an animation montage
 	//    (You can do that in your character or here, using an AnimInstance + Montage.)
-	OwnerBaseCharacter->bInvincible = StepData.bGrantsIFrames;
-	OwnerBaseCharacter->PlayAnimMontage(StepData.AnimationMontage, StepData.PlayRate, StepData.StartSectionName);
-	/*
-	// 3) Activate the ability (if any) from StepData
-	if (OwnerBaseCharacter && OwnerBaseCharacter->AbilitySubsystem && StepData.EncoreAbilities)
+	OwnerHitComponent->bInvincible = StepData.bGrantsIFrames;
+
+	if (StepData.ExecutionType == EComboExecutionType::AnimationMontageBased)
 	{
-		// We "give" the ability (create a Spec) to the subsystem, then activate it
-		UAbilitySystemComponent* ASC = OwnerBaseCharacter->AbilitySubsystem;
-		FGameplayAbilitySpec AbilitySpec(StepData.EncoreAbilities, 1, INDEX_NONE, this);
-		FGameplayAbilitySpecHandle SpecHandle = ASC->GiveAbility(AbilitySpec);
-		ASC->TryActivateAbility(SpecHandle);
+		PlayAnimMontage(StepData.AnimationMontage, StepData.PlayRate, StepData.StartSectionName);
 	}
-	*/
+	else if (StepData.ExecutionType == EComboExecutionType::AbilityBased)
+	{
+		auto LoadedAbility = StepData.Ability.LoadSynchronous();
+		if (Owner && OwnerAbilitySystem && StepData.Ability)
+		{
+			// We "give" the ability (create a Spec) to the subsystem, then activate it
+			FGameplayAbilitySpec AbilitySpec(LoadedAbility, 1, INDEX_NONE, this);
+			FGameplayAbilitySpecHandle SpecHandle = OwnerAbilitySystem->GiveAbility(AbilitySpec);
+			OwnerAbilitySystem->TryActivateAbility(SpecHandle);
+		}
+	}
 }
 
 void UComboChainComponent::OnStepFinished(const FComboStep& FinishedStep)
@@ -184,9 +206,6 @@ bool UComboChainComponent::IsWithinComboWindow() const
 
 void UComboChainComponent::ApplyComboStepEffects(const FComboStep& Step)
 {
-	ACharacter* Char = Cast<ACharacter>(GetOwner());
-	if (!Char) return;
-
 	// 2) I-frames
 	if (Step.bGrantsIFrames)
 	{

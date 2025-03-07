@@ -73,9 +73,6 @@ public:
 	void OnComboActionTriggered(EComboInputType InputType);
 	void OnComboActionCompleted(EComboInputType InputType);
 
-	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Health")
-	bool bInvincible = false;
 private:
 	/** Helper to bind all the combos from the CharacterProfile to input. */
 	void BindComboInputsFromProfile(UEnhancedInputComponent* EnhancedInputComp);

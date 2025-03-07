@@ -4,10 +4,12 @@
 #include "Components/ActorComponent.h"
 #include "ComboTypes.h"           // Contains FComboStep, FComboChain, EComboInputType
 #include "CharacterProfile.h"     // So we can reference UCharacterProfile
+#include "HitComponent.h"
+#include "InteroperableComponent.h"
 #include "ComboChainComponent.generated.h"
 
-class ABaseCharacter;
 
+class UAbilitySubsystem;
 /**
  * UComboChainComponent
  *
@@ -15,13 +17,21 @@ class ABaseCharacter;
  * track current steps, and activate abilities from each step.
  */
 UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
-class STYLISHCOMBATSTARTERKIT_API UComboChainComponent : public UActorComponent
+class STYLISHCOMBATSTARTERKIT_API UComboChainComponent : public UInteroperableComponent
 {
 	GENERATED_BODY()
 
 public:	
 	UComboChainComponent();
 
+	virtual void FindOwner() override;
+	
+	UPROPERTY()
+	UAbilitySubsystem* OwnerAbilitySystem;
+
+	UPROPERTY()
+	UHitComponent* OwnerHitComponent;
+	
 	/** Called by the Character whenever a combo input occurs. E.g. Light, Heavy, etc. */
 	UFUNCTION(BlueprintCallable, Category="Combo")
 	void OnComboInput(EComboInputType InputType);
@@ -63,10 +73,6 @@ protected:
 
 	/** Time we started the current combo step. */
 	float StepStartTime = 0.f;
-
-	/** Owning character (cached). */
-	UPROPERTY()
-	ABaseCharacter* OwnerBaseCharacter;
 
 	/** Start the specified chain at a given step. */
 	void StartChain(int32 ChainIndex, int32 StepIndex);

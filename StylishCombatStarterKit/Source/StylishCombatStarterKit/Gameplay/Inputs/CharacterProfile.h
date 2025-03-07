@@ -17,6 +17,7 @@ class STYLISHCOMBATSTARTERKIT_API UCharacterProfile : public UDataAsset
 {
 	GENERATED_BODY()
 public:
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Character Properties")
 	FName CharacterName;
 
