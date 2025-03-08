@@ -99,6 +99,9 @@ struct FComboStep
 	FName HitStartSectionName;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Hit", meta=(EditConditionHides, EditCondition="bSetHitAnimation"))
 	float HitPlayRate = 1.0f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Instanced, Category = "Settings")
+	TArray<class UComboValidationPolicy*> ValidationPolicies;
 };
 
 /**

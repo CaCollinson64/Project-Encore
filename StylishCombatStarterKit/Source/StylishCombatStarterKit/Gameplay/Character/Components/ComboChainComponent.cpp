@@ -4,6 +4,7 @@
 #include "TimerManager.h"
 #include "Kismet/GameplayStatics.h"
 #include "AbilitySystemComponent.h"
+#include "ComboPolicies/ComboValidationPolicy.h"
 #include "StylishCombatStarterKit/Gameplay/Character/Abilities/AbilitySubsystem.h"
 
 UComboChainComponent::UComboChainComponent()
@@ -155,6 +156,17 @@ void UComboChainComponent::StartComboStep(int32 StepIndex)
 
 	const FComboStep& StepData = ComboChains[CurrentChainIndex].Steps[StepIndex];
 
+	bool bStartExecution = true;
+	for (auto ValPolicy : StepData.ValidationPolicies)
+	{
+		if (!ValPolicy->CanExecuteCombo(StepData, Owner))
+		{
+			bStartExecution = false;
+			break;
+		}
+	}
+	if (!bStartExecution) return;
+	
 	// Shut down the combo if you haven't unlocked it yet.
 	if (CharacterRank < StepData.UnlockAtRank) return;
 	
