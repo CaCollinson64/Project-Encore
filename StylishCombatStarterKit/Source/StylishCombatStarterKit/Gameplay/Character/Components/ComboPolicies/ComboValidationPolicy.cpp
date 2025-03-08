@@ -4,3 +4,6 @@
 #include "ComboValidationPolicy.h"
 
 
+UComboValidationPolicy::UComboValidationPolicy()
+{
+}

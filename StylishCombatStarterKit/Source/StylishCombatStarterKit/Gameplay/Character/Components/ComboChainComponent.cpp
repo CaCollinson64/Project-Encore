@@ -4,6 +4,7 @@
 #include "TimerManager.h"
 #include "Kismet/GameplayStatics.h"
 #include "AbilitySystemComponent.h"
+#include "ComboPolicies/ComboBlockPolicy.h"
 #include "ComboPolicies/ComboValidationPolicy.h"
 #include "StylishCombatStarterKit/Gameplay/Character/Abilities/AbilitySubsystem.h"
 
@@ -147,6 +148,17 @@ void UComboChainComponent::StartChain(int32 ChainIndex, int32 StepIndex)
 	StartComboStep(StepIndex);
 }
 
+void UComboChainComponent::OnMontageEnded(UAnimMontage* AnimMontage, bool bArg)
+{
+	const FComboStep& StepData = ComboChains[CurrentChainIndex].Steps[CurrentStepIndex];
+
+	// Call your policies’ functions to unblock controls.
+	for (auto Policy : StepData.TickPolicies)  // Assuming you have a way to track them.
+	{
+		Policy->UnblockControls(StepData, Owner);
+	}
+}
+
 void UComboChainComponent::StartComboStep(int32 StepIndex)
 {
 	if (Owner == nullptr) return;
@@ -177,9 +189,22 @@ void UComboChainComponent::StartComboStep(int32 StepIndex)
 	//    (You can do that in your character or here, using an AnimInstance + Montage.)
 	OwnerHitComponent->bInvincible = StepData.bGrantsIFrames;
 
+	for (auto ValPolicy : StepData.TickPolicies)
+	{
+		ValPolicy->BlockControls(StepData, Owner);
+	}
+	
 	if (StepData.ExecutionType == EComboExecutionType::AnimationMontageBased)
 	{
 		PlayAnimMontage(StepData.AnimationMontage, StepData.PlayRate, StepData.StartSectionName);
+		
+		if (UAnimInstance* AnimInstance = OwnerMesh->GetAnimInstance())
+		{
+			FOnMontageEnded MontageEndedDelegate;
+			MontageEndedDelegate.BindUObject(this, &UComboChainComponent::OnMontageEnded);
+			AnimInstance->Montage_Play(StepData.AnimationMontage, StepData.PlayRate);
+			AnimInstance->Montage_SetEndDelegate(MontageEndedDelegate, StepData.AnimationMontage);
+		}
 	}
 	else if (StepData.ExecutionType == EComboExecutionType::AbilityBased)
 	{

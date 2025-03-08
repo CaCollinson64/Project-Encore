@@ -102,6 +102,9 @@ struct FComboStep
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Instanced, Category = "Settings")
 	TArray<class UComboValidationPolicy*> ValidationPolicies;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Instanced, Category = "Settings")
+	TArray<class UComboBlockPolicy*> TickPolicies;
 };
 
 /**
