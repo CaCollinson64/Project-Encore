@@ -65,6 +65,12 @@ struct FComboStep
 	FName StartSectionName;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Execution", meta=(EditConditionHides, EditCondition="ExecutionType==EComboExecutionType::AnimationMontageBased"))
+	bool bReleaseMontage;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Execution", meta=(EditConditionHides, EditCondition="ExecutionType==EComboExecutionType::AnimationMontageBased && bReleaseMontage"))
+	FName EndSectionName = "End";
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Execution", meta=(EditConditionHides, EditCondition="ExecutionType==EComboExecutionType::AnimationMontageBased"))
 	float PlayRate = 1.0f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Rank")

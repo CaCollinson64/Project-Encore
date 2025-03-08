@@ -70,14 +70,22 @@ void UComboChainComponent::OnComboInput(EComboInputType InputType)
 	}
 	else
 	{
+		const FComboStep& Step = ComboChains[CurrentChainIndex].Steps[CurrentStepIndex];
+		float Elapsed = GetWorld()->GetTimeSeconds() - StepStartTime;
+		
+		if (Elapsed <= Step.AttackDuration)
+			return;
+		
 		// If we’re mid-chain, see if we can go to the next step
 		if (!IsWithinComboWindow())
 		{
 			// The combo input was too late
 			ResetCombo();
+			
 			return;
 		}
 
+		bOnce = false;
 		// Attempt to move to the next step in the chain
 		const FComboChain& Chain = ComboChains[CurrentChainIndex];
 		int32 NextStepIndex = CurrentStepIndex + 1;
@@ -92,7 +100,7 @@ void UComboChainComponent::OnComboInput(EComboInputType InputType)
 			}
 			else
 			{
-				ResetCombo();
+					ResetCombo();
 			}
 		}
 		else
@@ -117,6 +125,14 @@ void UComboChainComponent::TriggerExit()
 
 	const FComboStep& Step = ComboChains[CurrentChainIndex].Steps[CurrentStepIndex];
 
+	if (Step.bReleaseMontage && !bOnce)
+	{
+		bOnce = true;
+		StepStartTime = GetWorld()->GetTimeSeconds();
+		PlayAnimMontage(Step.AnimationMontage, Step.PlayRate, Step.EndSectionName);
+		return;
+	}
+	
 	// If we're mid-chain, see if we can go to the next step
 	if (!Step.bCanEndComboInputReleased)
 		return;
@@ -148,24 +164,11 @@ void UComboChainComponent::StartChain(int32 ChainIndex, int32 StepIndex)
 	StartComboStep(StepIndex);
 }
 
-void UComboChainComponent::OnMontageEnded(UAnimMontage* AnimMontage, bool bArg)
-{
-	const FComboStep& StepData = ComboChains[CurrentChainIndex].Steps[CurrentStepIndex];
-
-	// Call your policies’ functions to unblock controls.
-	for (auto Policy : StepData.TickPolicies)  // Assuming you have a way to track them.
-	{
-		Policy->UnblockControls(StepData, Owner);
-	}
-}
-
 void UComboChainComponent::StartComboStep(int32 StepIndex)
 {
 	if (Owner == nullptr) return;
 
 	CurrentStepIndex = StepIndex;
-	StepStartTime = GetWorld()->GetTimeSeconds();
-
 	const FComboStep& StepData = ComboChains[CurrentChainIndex].Steps[StepIndex];
 
 	bool bStartExecution = true;
@@ -178,7 +181,9 @@ void UComboChainComponent::StartComboStep(int32 StepIndex)
 		}
 	}
 	if (!bStartExecution) return;
-	
+
+	StepStartTime = GetWorld()->GetTimeSeconds();
+
 	// Shut down the combo if you haven't unlocked it yet.
 	if (CharacterRank < StepData.UnlockAtRank) return;
 	
@@ -197,14 +202,6 @@ void UComboChainComponent::StartComboStep(int32 StepIndex)
 	if (StepData.ExecutionType == EComboExecutionType::AnimationMontageBased)
 	{
 		PlayAnimMontage(StepData.AnimationMontage, StepData.PlayRate, StepData.StartSectionName);
-		
-		if (UAnimInstance* AnimInstance = OwnerMesh->GetAnimInstance())
-		{
-			FOnMontageEnded MontageEndedDelegate;
-			MontageEndedDelegate.BindUObject(this, &UComboChainComponent::OnMontageEnded);
-			AnimInstance->Montage_Play(StepData.AnimationMontage, StepData.PlayRate);
-			AnimInstance->Montage_SetEndDelegate(MontageEndedDelegate, StepData.AnimationMontage);
-		}
 	}
 	else if (StepData.ExecutionType == EComboExecutionType::AbilityBased)
 	{

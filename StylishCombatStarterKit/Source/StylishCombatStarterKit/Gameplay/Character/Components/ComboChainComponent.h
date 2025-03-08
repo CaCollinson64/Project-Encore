@@ -42,6 +42,8 @@ public:
 	UFUNCTION(BlueprintCallable, Category="Combo")
 	void ResetCombo();
 
+	float PlayedAtTime;
+	float WaitSeconds;
 	UFUNCTION(BlueprintCallable, Category="Combo")
 	void TriggerExit();
 	/** DataAsset that defines the combos and input mapping. */
@@ -76,7 +78,7 @@ protected:
 	/** Start the specified chain at a given step. */
 	void StartChain(int32 ChainIndex, int32 StepIndex);
 
-	void OnMontageEnded(UAnimMontage* AnimMontage, bool bArg);
+	bool bOnce = false;
 	/** Enter a new step in the chain (play anim, do movement, call ability, etc.). */
 	void StartComboStep(int32 StepIndex);
 

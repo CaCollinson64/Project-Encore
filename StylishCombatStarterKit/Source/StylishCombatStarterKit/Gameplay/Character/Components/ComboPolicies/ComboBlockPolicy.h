@@ -16,9 +16,9 @@ class STYLISHCOMBATSTARTERKIT_API UComboBlockPolicy : public UObject
 	GENERATED_BODY()
 public:
 
-	UFUNCTION(BlueprintImplementableEvent, Category = "Combo")
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Combo")
 	void BlockControls(const FComboStep& ComboChain, AActor* TargetActor);
 	
-	UFUNCTION(BlueprintImplementableEvent, Category = "Combo")
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Combo")
 	void UnblockControls(const FComboStep& ComboChain, AActor* TargetActor); 
 };
