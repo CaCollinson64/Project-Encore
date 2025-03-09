@@ -12,6 +12,7 @@ class STYLISHCOMBATSTARTERKIT_API UReplayComponent : public UActorComponent
 public:
 	UReplayComponent();
 
+	
 	/** Array of transforms recorded over time */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Replay")
 	TArray<FTransform> TransformHistory;

@@ -4,6 +4,7 @@
 #include "Components/ActorComponent.h"
 #include "HitComponent.h"
 #include "BaseClasses/InteroperableComponent.h"
+#include "GameFramework/CharacterMovementComponent.h"
 #include "StylishCombatStarterKit/Gameplay/Character/Profile/CharacterProfile.h"
 #include "ComboChainComponent.generated.h"
 
@@ -30,7 +31,9 @@ public:
 
 	UPROPERTY()
 	UHitComponent* OwnerHitComponent;
-	
+
+	UPROPERTY()
+	UCharacterMovementComponent* OwnerMovementComponent;
 	/** Called by the Character whenever a combo input occurs. E.g. Light, Heavy, etc. */
 	UFUNCTION(BlueprintCallable, Category="Combo")
 	void OnComboInput(EComboInputType InputType);
@@ -80,6 +83,8 @@ protected:
 	bool ValidationCheck(int32 ChainIndex, int32 StepIndex);
 
 	bool bOnce = false;
+
+	bool bCheckValidation;
 	/** Enter a new step in the chain (play anim, do movement, call ability, etc.). */
 	void StartComboStep(int32 StepIndex);
 

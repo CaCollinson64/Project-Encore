@@ -36,6 +36,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Targeting")
 	float FieldOfView = 45.f;
 
+	UPROPERTY(BlueprintReadWrite, Category="Replay")
+	AActor* CurrentTarget;
+
 	/** Maximum number of targets for multi-target mode */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Targeting")
 	int32 MaxTargets = 3;

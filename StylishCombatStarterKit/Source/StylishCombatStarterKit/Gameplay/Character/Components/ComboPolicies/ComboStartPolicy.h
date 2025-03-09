@@ -12,11 +12,11 @@
  * 
  */
 UCLASS(Abstract, BlueprintType, Blueprintable, EditInlineNew, meta=(BlueprintSpawnableComponent))
-class STYLISHCOMBATSTARTERKIT_API UComboStartPolicy : public UPolicyBase
+class STYLISHCOMBATSTARTERKIT_API UComboPolicy : public UPolicyBase
 {
 	GENERATED_BODY()
 
 public:
 	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable, Category = "Combo")
-	void StartCombo(const FComboStep& ComboChain, AActor* TargetActor);
+	void ExecuteCombo(const FComboStep& ComboChain, AActor* TargetActor);
 };

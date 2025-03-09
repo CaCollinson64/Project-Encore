@@ -21,6 +21,16 @@ void UTargetingComponent::TickComponent(float DeltaTime, ELevelTick TickType, FA
 {
     Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
+    auto targets = FindTargets();
+    if (targets.Num() > 0 && targets[0])
+    {
+        CurrentTarget = targets[0];
+    }
+    else
+    {
+        CurrentTarget = nullptr;
+    }
+    
     for (auto target : FindTargets())
     {
         DrawDebugSphere(GetWorld(), target->GetActorLocation(),

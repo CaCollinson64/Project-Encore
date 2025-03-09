@@ -38,15 +38,19 @@ struct FComboStep
 	GENERATED_BODY()
 
 	// This will cancel the montage and END animation (Used for blocking attacks type of animations)
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Input", meta=(InlineEditConditionToggle))
-	bool bCanEndComboInputReleased = false;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Instanced, Category = "Settings")
-	class UComboStartPolicy* StartPolicies;
+	TArray<class UComboPolicy*> StartPolicies;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Input")
+	bool bCanEndComboInputReleased = false;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Input", meta=(EditCondition="!bCanEndComboInputReleased"))
+	bool bForceEndPolicyWithValidation = true;
 
 	// Manages Hit
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Instanced, Category = "Settings", meta=(EditCondition="bCanEndComboInputReleased", EditConditionHides))
-	class UComboEndPolicy* EndPolicies;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Instanced, Category = "Settings", meta=(EditCondition="bCanEndComboInputReleased || bForceEndPolicyWithValidation"))
+	TArray<class UComboPolicy*> EndPolicies;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Instanced, Category = "Settings")
 	TArray<class UComboValidationPolicy*> ValidationPolicies;

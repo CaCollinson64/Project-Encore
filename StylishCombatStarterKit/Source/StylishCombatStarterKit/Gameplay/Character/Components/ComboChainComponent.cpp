@@ -5,7 +5,6 @@
 #include "Kismet/GameplayStatics.h"
 #include "AbilitySystemComponent.h"
 #include "ComboPolicies/ComboBlockPolicy.h"
-#include "ComboPolicies/ComboEndPolicy.h"
 #include "ComboPolicies/ComboStartPolicy.h"
 #include "ComboPolicies/ComboValidationPolicy.h"
 #include "StylishCombatStarterKit/Gameplay/Character/Abilities/AbilitySubsystem.h"
@@ -20,6 +19,7 @@ void UComboChainComponent::FindOwner()
 	Super::FindOwner();
 	OwnerAbilitySystem = Cast<UAbilitySubsystem>(Owner->GetComponentByClass(UAbilitySubsystem::StaticClass()));
 	OwnerHitComponent = Cast<UHitComponent>(Owner->GetComponentByClass(UHitComponent::StaticClass()));
+	OwnerMovementComponent = Cast<UCharacterMovementComponent>(Owner->GetComponentByClass(UCharacterMovementComponent::StaticClass()));
 }
 
 void UComboChainComponent::BeginPlay()
@@ -50,6 +50,29 @@ void UComboChainComponent::TickComponent(float DeltaTime, ELevelTick TickType, F
 			OnStepFinished(CurrentStep);
 		}
 	}
+
+	if (bCheckValidation)
+	{
+		if (!ValidationCheck(CurrentChainIndex, CurrentStepIndex))
+		{
+			bCheckValidation = false;
+			const FComboStep& Step = ComboChains[CurrentChainIndex].Steps[CurrentStepIndex];
+
+			// If we're mid-chain, see if we can go to the next step
+			if (Step.bForceEndPolicyWithValidation)
+			{
+				for (auto endPolicy : Step.EndPolicies)
+				{
+					if (endPolicy)
+					{
+						endPolicy->ExecuteCombo(Step, Owner);
+					}
+				}
+
+				ResetCombo();
+			}
+		}
+	}
 }
 
 void UComboChainComponent::OnComboInput(EComboInputType InputType)
@@ -64,6 +87,7 @@ void UComboChainComponent::OnComboInput(EComboInputType InputType)
 				const FComboStep& FirstStep = ComboChains[i].Steps[0];
 				if (FirstStep.InputType == InputType && ValidationCheck(i, 0))
 				{
+					bOnce = false;
 					StartChain(i, 0);
 					return;
 				}
@@ -128,19 +152,26 @@ void UComboChainComponent::TriggerExit()
 	const FComboStep& Step = ComboChains[CurrentChainIndex].Steps[CurrentStepIndex];
 
 	// If we're mid-chain, see if we can go to the next step
-	if (!Step.bCanEndComboInputReleased)
+	if (!Step.bCanEndComboInputReleased || bOnce)
 		return;
+	
+	bOnce = true;
+	bCheckValidation = false;
+	StepStartTime = GetWorld()->GetTimeSeconds();
 
-	if (Step.EndPolicies)
+	for (auto endPolicy : Step.EndPolicies)
 	{
-		Step.EndPolicies->EndCombo(Step, Owner);
+		if (endPolicy)
+		{
+			endPolicy->ExecuteCombo(Step, Owner);
+		}
 	}
 }
 
 void UComboChainComponent::StartChain(int32 ChainIndex, int32 StepIndex)
 {
+	bOnce = false;
 	CurrentChainIndex = ChainIndex;
-	
 	StartComboStep(StepIndex);
 }
 
@@ -169,11 +200,10 @@ bool UComboChainComponent::ValidationCheck(int32 ChainIndex, int32 StepIndex)
 void UComboChainComponent::StartComboStep(int32 StepIndex)
 {
 	if (Owner == nullptr) return;
+	bOnce = false;
 
 	CurrentStepIndex = StepIndex;
 	const FComboStep& StepData = ComboChains[CurrentChainIndex].Steps[StepIndex];
-
-
 
 	StepStartTime = GetWorld()->GetTimeSeconds();
 
@@ -191,11 +221,16 @@ void UComboChainComponent::StartComboStep(int32 StepIndex)
 	{
 		ValPolicy->BlockControls(StepData, Owner);
 	}
-	
-	if (StepData.StartPolicies)
+
+	for (auto startPolicy : StepData.StartPolicies)
 	{
-		StepData.StartPolicies->StartCombo(StepData, Owner);
+		if (startPolicy)
+		{
+			startPolicy->ExecuteCombo(StepData, Owner);
+		}
 	}
+
+	bCheckValidation = true;
 }
 
 void UComboChainComponent::OnStepFinished(const FComboStep& FinishedStep)
