@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "PolicyBase.h"
 #include "UObject/Object.h"
 #include "ComboBlockPolicy.generated.h"
 
@@ -11,7 +12,7 @@ struct FComboStep;
  * 
  */
 UCLASS(Abstract, BlueprintType, Blueprintable, EditInlineNew, meta=(BlueprintSpawnableComponent))
-class STYLISHCOMBATSTARTERKIT_API UComboBlockPolicy : public UObject
+class STYLISHCOMBATSTARTERKIT_API UComboBlockPolicy : public UPolicyBase
 {
 	GENERATED_BODY()
 public:

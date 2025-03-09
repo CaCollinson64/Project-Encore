@@ -5,6 +5,8 @@
 #include "Kismet/GameplayStatics.h"
 #include "AbilitySystemComponent.h"
 #include "ComboPolicies/ComboBlockPolicy.h"
+#include "ComboPolicies/ComboEndPolicy.h"
+#include "ComboPolicies/ComboStartPolicy.h"
 #include "ComboPolicies/ComboValidationPolicy.h"
 #include "StylishCombatStarterKit/Gameplay/Character/Abilities/AbilitySubsystem.h"
 
@@ -125,37 +127,14 @@ void UComboChainComponent::TriggerExit()
 
 	const FComboStep& Step = ComboChains[CurrentChainIndex].Steps[CurrentStepIndex];
 
-	if (Step.bReleaseMontage && !bOnce)
-	{
-		bOnce = true;
-		StepStartTime = GetWorld()->GetTimeSeconds();
-		PlayAnimMontage(Step.AnimationMontage, Step.PlayRate, Step.EndSectionName);
-		return;
-	}
-	
 	// If we're mid-chain, see if we can go to the next step
 	if (!Step.bCanEndComboInputReleased)
 		return;
 
-	if (Step.bStopExecutionWithInputCancelled)
+	if (Step.EndPolicies)
 	{
-		if (Step.ExecutionType == EComboExecutionType::AnimationMontageBased)
-		{
-			StopMontage(Step.AnimationMontage);
-		}
-		else if (Step.ExecutionType == EComboExecutionType::AbilityBased)
-		{
-			auto LoadedAbility = Cast<UEncoreAbilities>(Step.Ability.LoadSynchronous());
-			if (Owner && OwnerAbilitySystem && Step.Ability)
-			{
-				OwnerAbilitySystem->CancelAbility(LoadedAbility);
-			}
-		}
+		Step.EndPolicies->EndCombo(Step, Owner);
 	}
-
-
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("TriggerExit"));
-	ResetCombo();
 }
 
 void UComboChainComponent::StartChain(int32 ChainIndex, int32 StepIndex)
@@ -180,7 +159,11 @@ void UComboChainComponent::StartComboStep(int32 StepIndex)
 			break;
 		}
 	}
-	if (!bStartExecution) return;
+	if (!bStartExecution)
+	{
+		ResetCombo();
+		return;
+	}
 
 	StepStartTime = GetWorld()->GetTimeSeconds();
 
@@ -194,25 +177,14 @@ void UComboChainComponent::StartComboStep(int32 StepIndex)
 	//    (You can do that in your character or here, using an AnimInstance + Montage.)
 	OwnerHitComponent->bInvincible = StepData.bGrantsIFrames;
 
-	for (auto ValPolicy : StepData.TickPolicies)
+	for (auto ValPolicy : StepData.InputOverridePolicies)
 	{
 		ValPolicy->BlockControls(StepData, Owner);
 	}
 	
-	if (StepData.ExecutionType == EComboExecutionType::AnimationMontageBased)
+	if (StepData.StartPolicies)
 	{
-		PlayAnimMontage(StepData.AnimationMontage, StepData.PlayRate, StepData.StartSectionName);
-	}
-	else if (StepData.ExecutionType == EComboExecutionType::AbilityBased)
-	{
-		auto LoadedAbility = StepData.Ability.LoadSynchronous();
-		if (Owner && OwnerAbilitySystem && StepData.Ability)
-		{
-			// We "give" the ability (create a Spec) to the subsystem, then activate it
-			FGameplayAbilitySpec AbilitySpec(LoadedAbility, 1, INDEX_NONE, this);
-			FGameplayAbilitySpecHandle SpecHandle = OwnerAbilitySystem->GiveAbility(AbilitySpec);
-			OwnerAbilitySystem->TryActivateAbility(SpecHandle);
-		}
+		StepData.StartPolicies->StartCombo(StepData, Owner);
 	}
 }
 

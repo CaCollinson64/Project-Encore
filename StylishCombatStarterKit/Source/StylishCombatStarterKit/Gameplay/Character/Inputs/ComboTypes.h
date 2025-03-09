@@ -37,51 +37,36 @@ struct FComboStep
 {
 	GENERATED_BODY()
 
+	// This will cancel the montage and END animation (Used for blocking attacks type of animations)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Input", meta=(InlineEditConditionToggle))
+	bool bCanEndComboInputReleased = false;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Instanced, Category = "Settings")
+	class UComboStartPolicy* StartPolicies;
+
+	// Manages Hit
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Instanced, Category = "Settings", meta=(EditCondition="bCanEndComboInputReleased", EditConditionHides))
+	class UComboEndPolicy* EndPolicies;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Instanced, Category = "Settings")
+	TArray<class UComboValidationPolicy*> ValidationPolicies;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Instanced, Category = "Settings")
+	TArray<class UComboBlockPolicy*> InputOverridePolicies;
+
 	/** The input required to continue to this step from the previous step (e.g., Light, Heavy). */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Input")
 	EComboInputType InputType = EComboInputType::None;
-
-	// This will cancel the montage and END animation (Used for blocking attacks type of animations)
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Input")
-	bool bCanEndComboInputReleased = false;
-
-	// This will cancel the montage and END animation
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Input", meta=(EditConditionHides, EditCondition="bCanEndComboInputReleased"))
-	bool bStopExecutionWithInputCancelled = false;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Execution")
-	EComboExecutionType ExecutionType = EComboExecutionType::None;
-
-	UPROPERTY(VisibleAnywhere, Category="Combo|Execution", meta=(EditConditionHides, EditCondition="ExecutionType==EComboExecutionType::None"))
-	FString ExecutionType_ToolTip = "No Execution type is selected!";
-	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Execution", meta=(EditConditionHides, EditCondition="ExecutionType==EComboExecutionType::AbilityBased"))
-	TSoftClassPtr<UEncoreAbilities> Ability;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Execution", meta=(EditConditionHides, EditCondition="ExecutionType==EComboExecutionType::AnimationMontageBased"))
-	UAnimMontage* AnimationMontage;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Execution", meta=(EditConditionHides, EditCondition="ExecutionType==EComboExecutionType::AnimationMontageBased"))
-	FName StartSectionName;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Execution", meta=(EditConditionHides, EditCondition="ExecutionType==EComboExecutionType::AnimationMontageBased"))
-	bool bReleaseMontage;
-	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Execution", meta=(EditConditionHides, EditCondition="ExecutionType==EComboExecutionType::AnimationMontageBased && bReleaseMontage"))
-	FName EndSectionName = "End";
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Execution", meta=(EditConditionHides, EditCondition="ExecutionType==EComboExecutionType::AnimationMontageBased"))
-	float PlayRate = 1.0f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Rank")
 	int UnlockAtRank = 0;
 
 	/** How long after we start this step the player can press the next input to continue. */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Timing")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Timing", meta=(Units="s"))
 	float ComboWindow = 0.5f;
 
 	/** Overall duration of this attack or how long we 'lock' the player. (Could tie to anim length.) */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Timing")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Timing", meta=(Units="s"))
 	float AttackDuration = 0.7f;
 
 	/** Damage inflicted by this step. */
@@ -96,21 +81,6 @@ struct FComboStep
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Advanced")
 	bool bGrantsIFrames = false;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Hit")
-	bool bSetHitAnimation;
-	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Hit", meta=(EditConditionHides, EditCondition="bSetHitAnimation"))
-	UAnimMontage* HitMontage;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Hit", meta=(EditConditionHides, EditCondition="bSetHitAnimation"))
-	FName HitStartSectionName;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Hit", meta=(EditConditionHides, EditCondition="bSetHitAnimation"))
-	float HitPlayRate = 1.0f;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Instanced, Category = "Settings")
-	TArray<class UComboValidationPolicy*> ValidationPolicies;
-	
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Instanced, Category = "Settings")
-	TArray<class UComboBlockPolicy*> TickPolicies;
 };
 
 /**
