@@ -62,7 +62,7 @@ void UComboChainComponent::OnComboInput(EComboInputType InputType)
 			if (ComboChains[i].Steps.Num() > 0)
 			{
 				const FComboStep& FirstStep = ComboChains[i].Steps[0];
-				if (FirstStep.InputType == InputType)
+				if (FirstStep.InputType == InputType && ValidationCheck(i, 0))
 				{
 					StartChain(i, 0);
 					return;
@@ -102,7 +102,7 @@ void UComboChainComponent::OnComboInput(EComboInputType InputType)
 			}
 			else
 			{
-					ResetCombo();
+				ResetCombo();
 			}
 		}
 		else
@@ -140,15 +140,13 @@ void UComboChainComponent::TriggerExit()
 void UComboChainComponent::StartChain(int32 ChainIndex, int32 StepIndex)
 {
 	CurrentChainIndex = ChainIndex;
+	
 	StartComboStep(StepIndex);
 }
 
-void UComboChainComponent::StartComboStep(int32 StepIndex)
+bool UComboChainComponent::ValidationCheck(int32 ChainIndex, int32 StepIndex)
 {
-	if (Owner == nullptr) return;
-
-	CurrentStepIndex = StepIndex;
-	const FComboStep& StepData = ComboChains[CurrentChainIndex].Steps[StepIndex];
+	const FComboStep& StepData = ComboChains[ChainIndex].Steps[StepIndex];
 
 	bool bStartExecution = true;
 	for (auto ValPolicy : StepData.ValidationPolicies)
@@ -159,11 +157,23 @@ void UComboChainComponent::StartComboStep(int32 StepIndex)
 			break;
 		}
 	}
+	
 	if (!bStartExecution)
 	{
-		ResetCombo();
-		return;
+		return false;
 	}
+
+	return true;
+}
+
+void UComboChainComponent::StartComboStep(int32 StepIndex)
+{
+	if (Owner == nullptr) return;
+
+	CurrentStepIndex = StepIndex;
+	const FComboStep& StepData = ComboChains[CurrentChainIndex].Steps[StepIndex];
+
+
 
 	StepStartTime = GetWorld()->GetTimeSeconds();
 
