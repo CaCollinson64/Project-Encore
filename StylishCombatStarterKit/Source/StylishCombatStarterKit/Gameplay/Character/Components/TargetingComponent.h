@@ -21,6 +21,9 @@ public:
 	// Sets default values for this component's properties
 	UTargetingComponent();
 
+	UFUNCTION(BlueprintImplementableEvent, Category = "Targeting")
+	void HandleGettingTargeted(bool bTarget);
+	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enemy Selection")
 	bool bIsEnemy = false;
 	
@@ -41,6 +44,7 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void IdentifyEnemies();
+	void SetEnemyGettingTargeted(AActor* Target, bool bTarget);
 
 	UPROPERTY()
 	AActor* CurrentTarget;

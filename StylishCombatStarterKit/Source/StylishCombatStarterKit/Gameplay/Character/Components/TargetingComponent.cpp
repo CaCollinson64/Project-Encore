@@ -39,7 +39,9 @@ void UTargetingComponent::TickComponent(float DeltaTime, ELevelTick TickType, FA
 
 	if (bIsEnemy)
 		return;
-	
+
+	SetEnemyGettingTargeted(CurrentTarget, false);
+
 	if(inputBasedSelection)
 	{
 		UpdateEnemyBasedOnInput();
@@ -48,6 +50,9 @@ void UTargetingComponent::TickComponent(float DeltaTime, ELevelTick TickType, FA
 	{
 		UpdateClosestEnemy();
 	}
+
+	SetEnemyGettingTargeted(CurrentTarget, true);
+
 }
 
 void UTargetingComponent::IdentifyEnemies()
@@ -86,14 +91,22 @@ void UTargetingComponent::IdentifyEnemies()
 	//DrawDebugSphere(GetWorld(), PlayerLocation, TraceRadius, 50, FColor::Green, false, 2.0f);
 }
 
+void UTargetingComponent::SetEnemyGettingTargeted(AActor* Target, bool bTarget)
+{
+	if (!Target) return;
+	auto TargetComponent = Cast<UTargetingComponent>(Target->GetComponentByClass(UTargetingComponent::StaticClass()));
+
+	if (!TargetComponent) return;
+	TargetComponent->HandleGettingTargeted(bTarget);
+}
+
 void UTargetingComponent::UpdateClosestEnemy()
 {
-
 	FVector PlayerLocation = Owner->GetActorLocation();
 	
 	float ClosestDistanceSq = FLT_MAX;
 	CurrentTarget = nullptr;
-
+	
 	for (int32 i = IdentifiedEnemies.Num() - 1; i >= 0; --i)
 	{
 		AActor* Enemy = IdentifiedEnemies[i];
@@ -137,7 +150,8 @@ void UTargetingComponent::UpdateEnemyBasedOnInput()
 		}
 	}
 	*/
-	
+	CurrentTarget = nullptr;
+
 
 	if (PlayerInputDirection.IsZero())
 	{
@@ -167,6 +181,7 @@ void UTargetingComponent::UpdateEnemyBasedOnInput()
 			return;
 		}
 	}
+
 }
 
 FVector UTargetingComponent::GetPlayerInputDirection() const
