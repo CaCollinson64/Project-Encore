@@ -107,7 +107,7 @@ void UComboChainComponent::OnComboInput(EComboInputType InputType)
 		{
 			// The combo input was too late
 			ResetCombo();
-			
+			OnComboInput(InputType);
 			return;
 		}
 
