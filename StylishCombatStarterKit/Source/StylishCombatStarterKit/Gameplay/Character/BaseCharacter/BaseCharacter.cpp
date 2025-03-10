@@ -11,7 +11,7 @@
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
 #include "Net/UnrealNetwork.h"
-#include "StylishCombatStarterKit/Gameplay/Character/Components/ComboChainComponent.h"
+#include "StylishCombatStarterKit/Gameplay/Character/Components/Fighting/ComboChainComponent.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
@@ -214,6 +214,11 @@ void ABaseCharacter::Move(const FInputActionValue& Value)
 		// add movement 
 		AddMovementInput(ForwardDirection, MovementVector.Y);
 		AddMovementInput(RightDirection, MovementVector.X);
+		
+		FVector InputDirection = (ForwardDirection * MovementVector.Y) + (RightDirection * MovementVector.X);
+		InputDirection.Normalize();
+		SetInputForTargeting(InputDirection);
+		
 	}
 }
 

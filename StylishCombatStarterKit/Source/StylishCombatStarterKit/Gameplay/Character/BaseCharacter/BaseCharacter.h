@@ -25,7 +25,9 @@ class STYLISHCOMBATSTARTERKIT_API ABaseCharacter : public ACharacter
 	GENERATED_BODY()
 
 public:
-	
+
+	UFUNCTION(BlueprintImplementableEvent, Category="Targeting")
+	void SetInputForTargeting(FVector Input);	
 	/** Our custom Dodge Component. */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Components")
 	UDodgeComponent* DodgeComponent;

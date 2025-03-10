@@ -11,15 +11,15 @@
 
 UComboChainComponent::UComboChainComponent()
 {
-	PrimaryComponentTick.bCanEverTick = bEnableTick;
+	PrimaryComponentTick.bCanEverTick = true;
 }
 
 void UComboChainComponent::FindOwner()
 {
 	Super::FindOwner();
 	OwnerAbilitySystem = Cast<UAbilitySubsystem>(Owner->GetComponentByClass(UAbilitySubsystem::StaticClass()));
-	OwnerHitComponent = Cast<UHitComponent>(Owner->GetComponentByClass(UHitComponent::StaticClass()));
 	OwnerMovementComponent = Cast<UCharacterMovementComponent>(Owner->GetComponentByClass(UCharacterMovementComponent::StaticClass()));
+	OwnerTargetingComponent= Cast<UTargetingComponent>(Owner->GetComponentByClass(UTargetingComponent::StaticClass()));
 }
 
 void UComboChainComponent::BeginPlay()
@@ -37,19 +37,7 @@ void UComboChainComponent::TickComponent(float DeltaTime, ELevelTick TickType, F
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-	// If we have a valid chain & step, watch for AttackDuration expiration
-	if (CurrentChainIndex >= 0 && CurrentChainIndex < ComboChains.Num() &&
-		CurrentStepIndex >= 0 && CurrentStepIndex < ComboChains[CurrentChainIndex].Steps.Num())
-	{
-		const FComboStep& CurrentStep = ComboChains[CurrentChainIndex].Steps[CurrentStepIndex];
-		float Elapsed = GetWorld()->GetTimeSeconds() - StepStartTime;
-		
-		if (Elapsed >= CurrentStep.AttackDuration)
-		{
-			// This step’s "locked" portion is done; we can call OnStepFinished
-			OnStepFinished(CurrentStep);
-		}
-	}
+	SnappingLogic();
 
 	if (bCheckValidation)
 	{
@@ -154,7 +142,7 @@ void UComboChainComponent::TriggerExit()
 	// If we're mid-chain, see if we can go to the next step
 	if (!Step.bCanEndComboInputReleased || bOnce)
 		return;
-	
+
 	bOnce = true;
 	bCheckValidation = false;
 	StepStartTime = GetWorld()->GetTimeSeconds();
@@ -215,7 +203,7 @@ void UComboChainComponent::StartComboStep(int32 StepIndex)
 
 	// 2) Possibly play an animation montage
 	//    (You can do that in your character or here, using an AnimInstance + Montage.)
-	OwnerHitComponent->bInvincible = StepData.bGrantsIFrames;
+	bInvincible = StepData.bGrantsIFrames;
 
 	for (auto ValPolicy : StepData.InputOverridePolicies)
 	{

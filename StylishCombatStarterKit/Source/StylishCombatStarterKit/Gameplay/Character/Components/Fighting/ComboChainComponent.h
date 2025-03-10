@@ -2,9 +2,9 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "HitComponent.h"
-#include "BaseClasses/InteroperableComponent.h"
+#include "../BaseClasses/InteroperableComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "StylishCombatStarterKit/Gameplay/Character/Components/TargetingComponent.h"
 #include "StylishCombatStarterKit/Gameplay/Character/Profile/CharacterProfile.h"
 #include "ComboChainComponent.generated.h"
 
@@ -25,15 +25,19 @@ public:
 	UComboChainComponent();
 
 	virtual void FindOwner() override;
+
+	UPROPERTY(BlueprintReadWrite, Category="Combo")
+	bool bIsSnapping;
 	
 	UPROPERTY()
 	UAbilitySubsystem* OwnerAbilitySystem;
 
 	UPROPERTY()
-	UHitComponent* OwnerHitComponent;
-
-	UPROPERTY()
 	UCharacterMovementComponent* OwnerMovementComponent;
+	
+	UPROPERTY()
+	UTargetingComponent* OwnerTargetingComponent;
+
 	/** Called by the Character whenever a combo input occurs. E.g. Light, Heavy, etc. */
 	UFUNCTION(BlueprintCallable, Category="Combo")
 	void OnComboInput(EComboInputType InputType);
@@ -59,11 +63,6 @@ protected:
 	virtual void BeginPlay() override;
 
 protected:
-
-
-	/** If true, we’ll do time-based checks in Tick(). */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Settings")
-	bool bEnableTick = false;
 
 	/** All combos we’re using, copied from CharacterProfile->ComboChains at runtime. */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Combo|Runtime", meta=(AllowPrivateAccess="true"))
@@ -96,4 +95,43 @@ protected:
 
 	/** Movement override, i-frames, quick damage checks, etc. */
 	void ApplyComboStepEffects(const FComboStep& Step);
+
+
+	/////////////// HIT COMPONENT
+
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Health")
+	float Health = 100.0f;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Health")
+	bool bInvincible = false;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Health")
+	bool bStunCharacter = false;
+
+	UFUNCTION( BlueprintCallable )
+	void PerformHitAnimation(bool bOverrideHitAnimation, UAnimMontage* AnimMontage, float InPlayRate, FName StartSectionName);
+
+	UFUNCTION( BlueprintCallable )
+	void SetStunCharacter(bool StunCharacter);
+	void ReduceHealth(float damage);
+	void SnappingLogic();
+ 
+	UPROPERTY(EditAnywhere, Category = "Snapping")
+	float SnapSpeed = 10.0f;
+
+	UPROPERTY(EditAnywhere, Category = "Snapping")
+	float SnappingRadius = 250.0f;
+
+	UPROPERTY(EditAnywhere, Category = "Snapping")
+	float RotationSnapSpeed = 10.0f;
+	
+	UPROPERTY(EditAnywhere, Category = "Snapping")
+	float OffsetDistance = 100.0f;
+
+	UFUNCTION( BlueprintNativeEvent )
+	void Death();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Hit")
+	bool bIsPerformingHitAnimation = false;
 };

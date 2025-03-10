@@ -18,43 +18,46 @@ class STYLISHCOMBATSTARTERKIT_API UTargetingComponent : public UInteroperableCom
 	GENERATED_BODY()
 
 public:
+	// Sets default values for this component's properties
 	UTargetingComponent();
 
-	// Only use if this character is the player
-	UPROPERTY()
-	USceneComponent* Camera;
+	UPROPERTY(EditAnywhere, Category = "Enemy Selection")
+	bool inputBasedSelection = false;
 	
-	/** Array of soft classes for valid targets */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Targeting")
-	TArray<TSoftClassPtr<AActor>> TargetableClasses;
+	UPROPERTY(EditAnywhere, Category = "Enemy Selection")
+	float TraceRadius = 1000.0f;
 
-	/** Maximum distance to consider a target valid */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Targeting")
-	float TargetingRange = 1000.f;
+	UPROPERTY(EditAnywhere, Category = "Enemy Selection")
+	float MaxDistance = 1500.0f;
 
-	/** Field of view (in degrees) to consider a target “in front” */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Targeting")
-	float FieldOfView = 45.f;
+	UPROPERTY(EditAnywhere, Category = "Enemy Selection")
+	TSubclassOf<AActor> EnemyClass;
 
-	UPROPERTY(BlueprintReadWrite, Category="Replay")
+	UPROPERTY(EditAnywhere, Category = "Enemy Selection")
+	TEnumAsByte<ECollisionChannel> TraceChannel;
+
+	UFUNCTION(BlueprintCallable)
+	void IdentifyEnemies();
+
+	UPROPERTY()
 	AActor* CurrentTarget;
 
-	/** Maximum number of targets for multi-target mode */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Targeting")
-	int32 MaxTargets = 3;
-
-	/** Target selection mode */
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Targeting")
-	ETargetSelectionMethod TargetSelectionMethod = ETargetSelectionMethod::SingleTarget;
-
-	/** Finds valid targets based on criteria */
-	UFUNCTION(BlueprintCallable, Category = "Targeting")
-	TArray<AActor*> FindTargets();
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input")
+	FVector InputDirection;
 
 protected:
+	// Called when the game starts
 	virtual void BeginPlay() override;
 
 public:
-	virtual void TickComponent(float DeltaTime, ELevelTick TickType,
-		FActorComponentTickFunction* ThisTickFunction) override;
+	// Called every frame
+	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+
+private:
+	void UpdateClosestEnemy();
+	TArray<AActor*> IdentifiedEnemies;
+	
+	void UpdateEnemyBasedOnInput();
+	FVector GetPlayerInputDirection() const;
+	bool IsDirectionMatching(FVector EnemyDirection, FVector PlayerInputDirection) const;
 };

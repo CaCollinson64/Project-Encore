@@ -5,121 +5,162 @@
 #include "DrawDebugHelpers.h"
 #include "Camera/CameraComponent.h"
 
+// Sets default values for this component's properties
 UTargetingComponent::UTargetingComponent()
 {
-    PrimaryComponentTick.bCanEverTick = true;
+	// Set this component to be initialized when the game starts, and to be ticked every frame. You can turn these features
+	// off to improve performance if you don't need them.
+	PrimaryComponentTick.bCanEverTick = true;
+	CurrentTarget = nullptr;
 }
 
+// Called when the game starts
 void UTargetingComponent::BeginPlay()
 {
-    Super::BeginPlay();
-
-    Camera = Cast<UCameraComponent>(Owner->GetComponentByClass(UCameraComponent::StaticClass()));
+	Super::BeginPlay();
 }
 
+// Called every frame
 void UTargetingComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
-    Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
-    auto targets = FindTargets();
-    if (targets.Num() > 0 && targets[0])
-    {
-        CurrentTarget = targets[0];
-    }
-    else
-    {
-        CurrentTarget = nullptr;
-    }
-    
-    for (auto target : FindTargets())
-    {
-        DrawDebugSphere(GetWorld(), target->GetActorLocation(),
-            70, 32, FColor::Red, false,
-            DeltaTime, 0, 15.0f);
-    }
+	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+	if(inputBasedSelection)
+	{
+		UpdateEnemyBasedOnInput();
+	}
+	else
+	{
+		UpdateClosestEnemy();
+	}
 }
 
-TArray<AActor*> UTargetingComponent::FindTargets()
+void UTargetingComponent::IdentifyEnemies()
 {
-    TArray<AActor*> ValidTargets;
-    if (!Owner)
-    {
-        return ValidTargets;
-    }
+	if (!Owner) return;
 
-    // Owner information
-    FVector OwnerLocation = Owner->GetActorLocation();
-    FVector OwnerForward = Owner->GetActorForwardVector();
+	FVector PlayerLocation = Owner->GetActorLocation();
+	TArray<FHitResult> HitResults;
 
-    // Override with camera if exsists
-    if (Camera != nullptr)
-    {
-        OwnerLocation = Camera->GetComponentLocation();
-        OwnerForward = Camera->GetForwardVector();
-    }
-    
-    // Use a set to avoid duplicate actors
-    TSet<AActor*> FoundActorsSet;
+	FCollisionShape Sphere = FCollisionShape::MakeSphere(TraceRadius);
+	bool bHit = GetWorld()->SweepMultiByChannel(
+		HitResults,
+		PlayerLocation,
+		PlayerLocation,
+		FQuat::Identity,
+		TraceChannel,
+		Sphere
+	);
 
-    // Loop through each soft class and get actors of that type
-    for (TSoftClassPtr<AActor>& SoftClass : TargetableClasses)
-    {
-        UClass* TargetClass = SoftClass.Get();
-        if (!TargetClass)
-        {
-            // If the class isn't loaded, load it synchronously
-            TargetClass = SoftClass.LoadSynchronous();
-        }
-        if (!TargetClass)
-        {
-            continue;
-        }
+	IdentifiedEnemies.Empty();
 
-        TArray<AActor*> ActorsOfClass;
-        UGameplayStatics::GetAllActorsOfClass(GetWorld(), TargetClass, ActorsOfClass);
-        for (AActor* Actor : ActorsOfClass)
-        {
-            if (Actor && Actor != Owner)
-            {
-                FoundActorsSet.Add(Actor);
-            }
-        }
-    }
+	for (const FHitResult& Hit : HitResults)
+	{
+		AActor* HitActor = Hit.GetActor();
+		if (HitActor && HitActor->IsA(EnemyClass))
+		{
+			float Distance = FVector::Dist(PlayerLocation, HitActor->GetActorLocation());
+			if (Distance <= MaxDistance)
+			{
+				IdentifiedEnemies.Add(HitActor);
+			}
+		}
+	}
 
-    // Process the aggregated actors and filter based on distance and field-of-view.
-    for (AActor* Actor : FoundActorsSet.Array())
-    {
-        float Distance = FVector::Dist(OwnerLocation, Actor->GetActorLocation());
-        if (Distance > TargetingRange)
-        {
-            continue;
-        }
+	// Debug
+	//DrawDebugSphere(GetWorld(), PlayerLocation, TraceRadius, 50, FColor::Green, false, 2.0f);
+}
 
-        FVector DirectionToActor = (Actor->GetActorLocation() - OwnerLocation).GetSafeNormal();
-        float DotProduct = FVector::DotProduct(OwnerForward, DirectionToActor);
-        float AngleDegrees = FMath::RadiansToDegrees(FMath::Acos(DotProduct));
-        if (AngleDegrees > FieldOfView)
-        {
-            continue;
-        }
+void UTargetingComponent::UpdateClosestEnemy()
+{
 
-        ValidTargets.Add(Actor);
+	FVector PlayerLocation = Owner->GetActorLocation();
+	
+	float ClosestDistanceSq = FLT_MAX;
+	CurrentTarget = nullptr;
 
-        // Stop early if we only need a single target.
-        if (TargetSelectionMethod == ETargetSelectionMethod::SingleTarget)
-        {
-            break;
-        }
-    }
+	for (int32 i = IdentifiedEnemies.Num() - 1; i >= 0; --i)
+	{
+		AActor* Enemy = IdentifiedEnemies[i];
+		if (!Enemy || FVector::Dist(PlayerLocation, Enemy->GetActorLocation()) > MaxDistance)
+		{
+			IdentifiedEnemies.RemoveAt(i);
+			continue;
+		}
 
-    // For MultiTarget mode, sort by distance and limit to MaxTargets.
-    if (TargetSelectionMethod == ETargetSelectionMethod::MultiTarget && ValidTargets.Num() > MaxTargets)
-    {
-        ValidTargets.Sort([OwnerLocation](const AActor& A, const AActor& B) {
-            return FVector::DistSquared(OwnerLocation, A.GetActorLocation()) < FVector::DistSquared(OwnerLocation, B.GetActorLocation());
-        });
-        ValidTargets.SetNum(MaxTargets);
-    }
+		float DistanceSq = FVector::DistSquared(PlayerLocation, Enemy->GetActorLocation());
+		if (DistanceSq < ClosestDistanceSq)
+		{
+			ClosestDistanceSq = DistanceSq;
+			CurrentTarget = Enemy;
+		}
+	}
 
-    return ValidTargets;
+	// Debug
+	if (CurrentTarget)
+	{
+		DrawDebugLine(GetWorld(), PlayerLocation, CurrentTarget->GetActorLocation(), FColor::Red, false, 0.1f, 0, 2.0f);
+	}
+}
+
+void UTargetingComponent::UpdateEnemyBasedOnInput()
+{
+	if (!Owner) return;
+
+	const FVector PlayerInputDirection = GetPlayerInputDirection();
+/*
+	if(CurrentTarget)
+	{
+		float ClosestDistanceSq = FLT_MAX;
+
+		FVector PlayerLocation = Owner->GetActorLocation();
+	
+		float DistanceSq = FVector::DistSquared(PlayerLocation, CurrentTarget->GetActorLocation());
+		if (DistanceSq > ClosestDistanceSq)
+		{
+			CurrentTarget = nullptr;
+		}
+	}
+	*/
+	
+
+	if (PlayerInputDirection.IsZero())
+	{
+		UpdateClosestEnemy();
+		return;
+	}
+	FVector PlayerLocation = Owner->GetActorLocation();
+	FVector PlayerForward = Owner->GetActorForwardVector();
+
+	for (int32 i = IdentifiedEnemies.Num() - 1; i >= 0; --i)
+	{
+		AActor* Enemy = IdentifiedEnemies[i];
+		if (!Enemy) continue;
+
+		if (!Enemy || FVector::Dist(PlayerLocation, Enemy->GetActorLocation()) > MaxDistance)
+		{
+			IdentifiedEnemies.RemoveAt(i);
+			continue;
+		}
+		
+		FVector EnemyDirection = (Enemy->GetActorLocation() - PlayerLocation).GetSafeNormal();
+		if (IsDirectionMatching(EnemyDirection, PlayerInputDirection))
+		{
+			CurrentTarget = Enemy;
+			// Debug
+			DrawDebugLine(GetWorld(), PlayerLocation, CurrentTarget->GetActorLocation(), FColor::Blue, false, 0.1f, 0, 2.0f);
+			return;
+		}
+	}
+}
+
+FVector UTargetingComponent::GetPlayerInputDirection() const
+{
+	return InputDirection;
+}
+
+bool UTargetingComponent::IsDirectionMatching(FVector EnemyDirection, FVector PlayerInputDirection) const
+{
+	const float DotThreshold = 0.8f; // Adjust threshold as needed for sensitivity
+	float DotProduct = FVector::DotProduct(EnemyDirection, PlayerInputDirection);
+	return DotProduct > DotThreshold;
 }
