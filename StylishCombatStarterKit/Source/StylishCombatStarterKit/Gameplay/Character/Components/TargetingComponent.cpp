@@ -4,6 +4,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "DrawDebugHelpers.h"
 #include "Camera/CameraComponent.h"
+#include "GameFramework/Character.h"
 
 // Sets default values for this component's properties
 UTargetingComponent::UTargetingComponent()
@@ -18,12 +19,27 @@ UTargetingComponent::UTargetingComponent()
 void UTargetingComponent::BeginPlay()
 {
 	Super::BeginPlay();
+
+	if (bIsEnemy)
+	{
+		ACharacter* PlayerCharacter = UGameplayStatics::GetPlayerCharacter(this, 0);
+		if (PlayerCharacter)
+		{
+			CurrentTarget = PlayerCharacter;
+		}
+		
+		SetComponentTickEnabled(false);
+	}
 }
 
 // Called every frame
 void UTargetingComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+
+	if (bIsEnemy)
+		return;
+	
 	if(inputBasedSelection)
 	{
 		UpdateEnemyBasedOnInput();

@@ -38,7 +38,8 @@ void UComboChainComponent::SnappingLogic()
 {
 	if(!bIsSnapping) return;
 	if (!Owner) return;
-	
+	if (!OwnerTargetingComponent) return;
+
 	OwnerMovementComponent->StopMovementImmediately();
 	
 	if (const AActor* Target = OwnerTargetingComponent->CurrentTarget)

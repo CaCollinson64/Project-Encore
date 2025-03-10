@@ -21,6 +21,9 @@ public:
 	// Sets default values for this component's properties
 	UTargetingComponent();
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Enemy Selection")
+	bool bIsEnemy = false;
+	
 	UPROPERTY(EditAnywhere, Category = "Enemy Selection")
 	bool inputBasedSelection = false;
 	

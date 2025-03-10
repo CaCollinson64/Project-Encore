@@ -165,6 +165,8 @@ void UComboChainComponent::StartChain(int32 ChainIndex, int32 StepIndex)
 
 bool UComboChainComponent::ValidationCheck(int32 ChainIndex, int32 StepIndex)
 {
+	if (ChainIndex < 0 || StepIndex < 0) return true;
+	
 	const FComboStep& StepData = ComboChains[ChainIndex].Steps[StepIndex];
 
 	bool bStartExecution = true;
