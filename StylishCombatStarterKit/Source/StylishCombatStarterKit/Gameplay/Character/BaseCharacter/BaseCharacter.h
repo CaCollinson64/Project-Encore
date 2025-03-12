@@ -25,7 +25,12 @@ class STYLISHCOMBATSTARTERKIT_API ABaseCharacter : public ACharacter
 	GENERATED_BODY()
 
 public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Abilities")
+	bool bCanJump = true;
 
+	UFUNCTION(BlueprintCallable)
+	void StartJumping();
+	
 	UFUNCTION(BlueprintImplementableEvent, Category="Targeting")
 	void SetInputForTargeting(FVector Input);	
 	/** Our custom Dodge Component. */
