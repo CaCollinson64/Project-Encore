@@ -25,6 +25,9 @@ class STYLISHCOMBATSTARTERKIT_API ABaseCharacter : public ACharacter
 	GENERATED_BODY()
 
 public:
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Camera|Sens")
+	float CameraSensitivity = 1.0f;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Abilities")
 	bool bCanJump = true;
 
