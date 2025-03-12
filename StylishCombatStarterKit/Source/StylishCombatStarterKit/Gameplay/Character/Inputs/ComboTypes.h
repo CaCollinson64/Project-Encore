@@ -37,7 +37,8 @@ struct FComboStep
 {
 	GENERATED_BODY()
 
-	// This will cancel the montage and END animation (Used for blocking attacks type of animations)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|General", meta=(GetOptions="GetHitRegisterKeys"))
+	FString HitSetup;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Instanced, Category = "Settings")
 	TArray<class UComboPolicy*> StartPolicies;
@@ -48,7 +49,6 @@ struct FComboStep
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Input", meta=(EditCondition="!bCanEndComboInputReleased"))
 	bool bForceEndPolicyWithValidation = true;
 
-	// Manages Hit
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Instanced, Category = "Settings", meta=(EditCondition="bCanEndComboInputReleased || bForceEndPolicyWithValidation"))
 	TArray<class UComboPolicy*> EndPolicies;
 
@@ -57,7 +57,7 @@ struct FComboStep
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Instanced, Category = "Settings")
 	TArray<class UComboBlockPolicy*> InputOverridePolicies;
-
+	
 	/** The input required to continue to this step from the previous step (e.g., Light, Heavy). */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Input")
 	EComboInputType InputType = EComboInputType::None;

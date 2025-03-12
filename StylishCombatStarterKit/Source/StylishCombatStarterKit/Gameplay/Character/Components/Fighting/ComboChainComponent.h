@@ -51,6 +51,21 @@ public:
 
 	float PlayedAtTime;
 	float WaitSeconds;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Hit")
+	AActor* Defender;
+	UFUNCTION(BlueprintCallable, Category="Combo|Hit")
+	void ExecuteHitOnEnemy();
+	UFUNCTION(BlueprintCallable, Category="Combo|Hit")
+	void ReleaseHitOnEnemy();
+	UFUNCTION(BlueprintCallable, Category="Combo|Hit")
+	void PlayHitAnimation(FComboStep& Step);
+	UFUNCTION(BlueprintCallable, Category="Combo|Hit")
+	void StopHitAnimation();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Hit")
+	bool bIsGettingHit = false;
+	
 	UFUNCTION(BlueprintCallable, Category="Combo")
 	void TriggerExit();
 	/** DataAsset that defines the combos and input mapping. */

@@ -37,6 +37,7 @@ void UComboChainComponent::TickComponent(float DeltaTime, ELevelTick TickType, F
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
+	if (bIsGettingHit) return;
 	SnappingLogic();
 
 	if (bCheckValidation)
@@ -65,6 +66,8 @@ void UComboChainComponent::TickComponent(float DeltaTime, ELevelTick TickType, F
 
 void UComboChainComponent::OnComboInput(EComboInputType InputType)
 {
+	if (bIsGettingHit) return;
+	
 	// If we're not currently in a chain, try to start one whose first step matches the input
 	if (CurrentChainIndex == -1)
 	{
@@ -132,6 +135,51 @@ void UComboChainComponent::ResetCombo()
 	CurrentStepIndex = -1;
 }
 
+
+void UComboChainComponent::ExecuteHitOnEnemy()
+{
+	if (CurrentChainIndex < 0 || CurrentStepIndex < 0)
+		return;
+
+	FComboStep& Step = ComboChains[CurrentChainIndex].Steps[CurrentStepIndex];
+
+	if (Defender)
+	{
+		auto FighterComponent = Cast<UComboChainComponent>(Defender->GetComponentByClass(StaticClass()));
+		FighterComponent->ReleaseHitOnEnemy();
+	}
+	
+	Defender = OwnerTargetingComponent->CurrentTarget;
+	if (Defender == nullptr) return;
+
+	auto FighterComponent = Cast<UComboChainComponent>(Defender->GetComponentByClass(StaticClass()));
+	FighterComponent->PlayHitAnimation(Step);
+}
+
+void UComboChainComponent::ReleaseHitOnEnemy()
+{
+	if (Defender == nullptr) return;
+
+	auto FighterComponent = Cast<UComboChainComponent>(Defender->GetComponentByClass(StaticClass()));
+	FighterComponent->StopHitAnimation();
+	Defender = nullptr;
+}
+
+void UComboChainComponent::PlayHitAnimation(FComboStep& Step)
+{
+	if (!CharacterProfile->HitRegister.Contains(Step.HitSetup)) return;
+	
+	const FHitReaction& Reaction = CharacterProfile->HitRegister[Step.HitSetup];
+	bIsGettingHit = true;
+	
+	PlayAnimMontage(Reaction.HitReactionMontage, Reaction.inPlayRate, Reaction.SectionName);
+}
+
+void UComboChainComponent::StopHitAnimation()
+{
+	bIsGettingHit = false;
+}
+
 void UComboChainComponent::TriggerExit()
 {
 	if (CurrentChainIndex < 0 || CurrentStepIndex < 0)
@@ -189,6 +237,7 @@ bool UComboChainComponent::ValidationCheck(int32 ChainIndex, int32 StepIndex)
 
 void UComboChainComponent::StartComboStep(int32 StepIndex)
 {
+	if (bIsGettingHit) return;
 	if (Owner == nullptr) return;
 	bOnce = false;
 
