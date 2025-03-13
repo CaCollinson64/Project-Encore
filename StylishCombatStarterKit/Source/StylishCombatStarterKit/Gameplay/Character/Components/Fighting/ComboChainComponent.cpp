@@ -157,13 +157,14 @@ void UComboChainComponent::ExecuteHitOnEnemy()
 	if (dist >= HitDistance) return;
 	
 	auto FighterComponent = Cast<UComboChainComponent>(Defender->GetComponentByClass(StaticClass()));
-	FighterComponent->PlayHitAnimation(Step);
-	
 	if (FighterComponent->OwnerCharacter)
 	{
+		FighterComponent->OwnerCharacter->StopAnimMontage();
 		FighterComponent->OwnerMovementComponent->StopMovementImmediately();
 		FighterComponent->OwnerCharacter->bCanMove = false;
 	}
+
+	FighterComponent->PlayHitAnimation(Step);
 }
 
 bool UComboChainComponent::HasEnemy()
