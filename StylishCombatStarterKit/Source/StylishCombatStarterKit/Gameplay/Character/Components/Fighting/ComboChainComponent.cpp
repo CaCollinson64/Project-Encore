@@ -131,7 +131,7 @@ void UComboChainComponent::OnComboInput(EComboInputType InputType)
 
 void UComboChainComponent::ResetCombo()
 {
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("ResetCombo"));
+	//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("ResetCombo"));
 	CurrentChainIndex = -1;
 	CurrentStepIndex = -1;
 }

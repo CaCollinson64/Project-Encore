@@ -33,12 +33,6 @@ void AWeaponActor::BeginPlay()
 
 	// Initialize the current bullet count to the magazine size
 	CurrentBullets = GunStats.MagazineSize;
-
-	// Print a debug message indicating that the weapon is ready
-	if (GEngine)
-	{
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("WeaponActor spawned and ready"));
-	}
 }
 
 // Called every frame

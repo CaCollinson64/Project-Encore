@@ -46,7 +46,7 @@ public:
 	void IdentifyEnemies();
 	void SetEnemyGettingTargeted(AActor* Target, bool bTarget);
 
-	UPROPERTY()
+	UPROPERTY(BlueprintReadWrite, Category = "Targeting")
 	AActor* CurrentTarget;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input")

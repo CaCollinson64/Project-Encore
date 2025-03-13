@@ -127,7 +127,7 @@ void UTargetingComponent::UpdateClosestEnemy()
 	// Debug
 	if (CurrentTarget)
 	{
-		DrawDebugLine(GetWorld(), PlayerLocation, CurrentTarget->GetActorLocation(), FColor::Red, false, 0.1f, 0, 2.0f);
+		//DrawDebugLine(GetWorld(), PlayerLocation, CurrentTarget->GetActorLocation(), FColor::Red, false, 0.1f, 0, 2.0f);
 	}
 }
 
@@ -140,8 +140,8 @@ void UTargetingComponent::UpdateEnemyBasedOnInput()
 	if(CurrentTarget)
 	{
 		FVector PlayerLocation = Owner->GetActorLocation();
-		float DistanceSq = FVector::DistSquared(PlayerLocation, CurrentTarget->GetActorLocation());
-		if (DistanceSq > MaxDistance)
+		auto newDist = FVector::Dist(PlayerLocation, CurrentTarget->GetActorLocation());
+		if (newDist > MaxDistance)
 		{
 			CurrentTarget = nullptr;
 		}
@@ -153,29 +153,36 @@ void UTargetingComponent::UpdateEnemyBasedOnInput()
 		return;
 	}
 	FVector PlayerLocation = Owner->GetActorLocation();
-	FVector PlayerForward = Owner->GetActorForwardVector();
-
+	
+	float dist = FLT_MAX;
 	for (int32 i = IdentifiedEnemies.Num() - 1; i >= 0; --i)
 	{
 		AActor* Enemy = IdentifiedEnemies[i];
 		if (!Enemy) continue;
 
-		if (!Enemy || FVector::Dist(PlayerLocation, Enemy->GetActorLocation()) > MaxDistance)
+		auto newDist = FVector::Dist(PlayerLocation, Enemy->GetActorLocation());
+		if (!Enemy || newDist > MaxDistance)
 		{
 			IdentifiedEnemies.RemoveAt(i);
 			continue;
 		}
 		
 		FVector EnemyDirection = (Enemy->GetActorLocation() - PlayerLocation).GetSafeNormal();
+		
+		if (newDist < dist)
+		{
+			dist = newDist;
+			CurrentTarget = Enemy;
+			//DrawDebugLine(GetWorld(), PlayerLocation, CurrentTarget->GetActorLocation(), FColor::White, false, 0.1f, 0, 2.0f);
+		}
+		
 		if (IsDirectionMatching(EnemyDirection, PlayerInputDirection))
 		{
 			CurrentTarget = Enemy;
-			// Debug
-			DrawDebugLine(GetWorld(), PlayerLocation, CurrentTarget->GetActorLocation(), FColor::Blue, false, 0.1f, 0, 2.0f);
-			return;
+			//DrawDebugLine(GetWorld(), PlayerLocation, CurrentTarget->GetActorLocation(), FColor::Blue, false, 0.1f, 0, 2.0f);
+			break;
 		}
 	}
-
 }
 
 FVector UTargetingComponent::GetPlayerInputDirection() const
