@@ -166,6 +166,16 @@ void UComboChainComponent::ExecuteHitOnEnemy()
 	}
 }
 
+bool UComboChainComponent::HasEnemy()
+{
+	if (OwnerTargetingComponent->CurrentTarget == nullptr) return false;
+
+	auto dist = OwnerTargetingComponent->CurrentTarget->GetDistanceTo(Owner);
+	if (dist >= HitDistance) return false;
+
+	return true;
+}
+
 void UComboChainComponent::ReleaseHitOnEnemy()
 {
 	if (Defender == nullptr) return;

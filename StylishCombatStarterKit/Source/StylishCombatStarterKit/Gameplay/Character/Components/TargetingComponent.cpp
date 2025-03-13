@@ -136,22 +136,16 @@ void UTargetingComponent::UpdateEnemyBasedOnInput()
 	if (!Owner) return;
 
 	const FVector PlayerInputDirection = GetPlayerInputDirection();
-/*
+	
 	if(CurrentTarget)
 	{
-		float ClosestDistanceSq = FLT_MAX;
-
 		FVector PlayerLocation = Owner->GetActorLocation();
-	
 		float DistanceSq = FVector::DistSquared(PlayerLocation, CurrentTarget->GetActorLocation());
-		if (DistanceSq > ClosestDistanceSq)
+		if (DistanceSq > MaxDistance)
 		{
 			CurrentTarget = nullptr;
 		}
 	}
-	*/
-	CurrentTarget = nullptr;
-
 
 	if (PlayerInputDirection.IsZero())
 	{

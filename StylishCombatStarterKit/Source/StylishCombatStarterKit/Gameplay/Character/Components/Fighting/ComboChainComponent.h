@@ -63,6 +63,8 @@ public:
 	AActor* Defender;
 	UFUNCTION(BlueprintCallable, Category="Combo|Hit")
 	void ExecuteHitOnEnemy();
+	UFUNCTION(BlueprintCallable, BlueprintPure, Category="Combo|Hit")
+	bool HasEnemy();
 	UFUNCTION(BlueprintCallable, Category="Combo|Hit")
 	void ReleaseHitOnEnemy();
 	UFUNCTION(BlueprintCallable, Category="Combo|Hit")
