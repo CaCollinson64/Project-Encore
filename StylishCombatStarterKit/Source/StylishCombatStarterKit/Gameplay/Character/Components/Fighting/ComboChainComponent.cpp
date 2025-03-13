@@ -20,6 +20,7 @@ void UComboChainComponent::FindOwner()
 	OwnerAbilitySystem = Cast<UAbilitySubsystem>(Owner->GetComponentByClass(UAbilitySubsystem::StaticClass()));
 	OwnerMovementComponent = Cast<UCharacterMovementComponent>(Owner->GetComponentByClass(UCharacterMovementComponent::StaticClass()));
 	OwnerTargetingComponent= Cast<UTargetingComponent>(Owner->GetComponentByClass(UTargetingComponent::StaticClass()));
+	OwnerCharacter = Cast<ABaseCharacter>(Owner);
 }
 
 void UComboChainComponent::BeginPlay()
@@ -148,12 +149,21 @@ void UComboChainComponent::ExecuteHitOnEnemy()
 		auto FighterComponent = Cast<UComboChainComponent>(Defender->GetComponentByClass(StaticClass()));
 		FighterComponent->ReleaseHitOnEnemy();
 	}
-	
+
 	Defender = OwnerTargetingComponent->CurrentTarget;
 	if (Defender == nullptr) return;
 
+	auto dist = Defender->GetDistanceTo(Owner);
+	if (dist >= HitDistance) return;
+	
 	auto FighterComponent = Cast<UComboChainComponent>(Defender->GetComponentByClass(StaticClass()));
 	FighterComponent->PlayHitAnimation(Step);
+	
+	if (FighterComponent->OwnerCharacter)
+	{
+		FighterComponent->OwnerMovementComponent->StopMovementImmediately();
+		FighterComponent->OwnerCharacter->bCanMove = false;
+	}
 }
 
 void UComboChainComponent::ReleaseHitOnEnemy()
@@ -173,11 +183,21 @@ void UComboChainComponent::PlayHitAnimation(FComboStep& Step)
 	bIsGettingHit = true;
 	
 	PlayAnimMontage(Reaction.HitReactionMontage, Reaction.inPlayRate, Reaction.SectionName);
+	float EffectiveDuration = Reaction.HitReactionMontage->GetPlayLength() / Reaction.inPlayRate;
+
+	// Set a timer to call StopHitAnimation after the delay
+	// Backup delay.
+	GetWorld()->GetTimerManager().SetTimer(HitAnimationTimerHandle,
+		this, &UComboChainComponent::StopHitAnimation, EffectiveDuration, false);
 }
 
 void UComboChainComponent::StopHitAnimation()
 {
 	bIsGettingHit = false;
+	HitAnimationTimerHandle.Invalidate();
+	
+	if (OwnerCharacter)
+		OwnerCharacter->bCanMove = true;
 }
 
 void UComboChainComponent::TriggerExit()

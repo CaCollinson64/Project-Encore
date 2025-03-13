@@ -4,6 +4,7 @@
 #include "Components/ActorComponent.h"
 #include "../BaseClasses/InteroperableComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "StylishCombatStarterKit/Gameplay/Character/BaseCharacter/BaseCharacter.h"
 #include "StylishCombatStarterKit/Gameplay/Character/Components/TargetingComponent.h"
 #include "StylishCombatStarterKit/Gameplay/Character/Profile/CharacterProfile.h"
 #include "ComboChainComponent.generated.h"
@@ -28,7 +29,10 @@ public:
 
 	UPROPERTY(BlueprintReadWrite, Category="Combo")
 	bool bIsSnapping;
-	
+
+	UPROPERTY()
+	ABaseCharacter* OwnerCharacter;
+
 	UPROPERTY()
 	UAbilitySubsystem* OwnerAbilitySystem;
 
@@ -51,7 +55,10 @@ public:
 
 	float PlayedAtTime;
 	float WaitSeconds;
+	FTimerHandle HitAnimationTimerHandle;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Hit")
+	float HitDistance = 150.0f;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Combo|Hit")
 	AActor* Defender;
 	UFUNCTION(BlueprintCallable, Category="Combo|Hit")

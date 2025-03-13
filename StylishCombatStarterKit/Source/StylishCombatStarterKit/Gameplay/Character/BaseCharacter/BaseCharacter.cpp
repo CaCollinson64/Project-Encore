@@ -202,6 +202,8 @@ void ABaseCharacter::HandleDodge()
 
 void ABaseCharacter::Move(const FInputActionValue& Value)
 {
+	if (!bCanMove) return;
+	
 	// input is a Vector2D
 	FVector2D MovementVector = Value.Get<FVector2D>();
 
