@@ -1,0 +1,53 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.AdvancedThirdPersonCamera.1.cpp.obj": [
+			"AdvancedThirdPersonCamera.init.gen.cpp.obj",
+			"ATPCArrowDebugActor.gen.cpp.obj",
+			"ATPCCameraBaseObject.gen.cpp.obj",
+			"ATPCCameraComponent.gen.cpp.obj",
+			"ATPCCameraFadingObject.gen.cpp.obj",
+			"ATPCCameraFollowTerrainObject.gen.cpp.obj",
+			"ATPCCameraFOVObject.gen.cpp.obj",
+			"ATPCCameraLocationObject.gen.cpp.obj",
+			"ATPCCameraLockOnTargetObject.gen.cpp.obj",
+			"ATPCCameraModeDataAsset.gen.cpp.obj",
+			"ATPCCameraModeScript.gen.cpp.obj",
+			"ATPCCameraModeScript_ChangeMovementSpeed.gen.cpp.obj",
+			"ATPCCameraModeScript_PawnUseControllerRotation.gen.cpp.obj"
+		],
+		"Module.AdvancedThirdPersonCamera.2.cpp.obj": [
+			"ATPCCameraModeScript_RotateActorToTarget.gen.cpp.obj",
+			"ATPCCameraShakesObject.gen.cpp.obj",
+			"ATPCCameraVolume.gen.cpp.obj",
+			"ATPCFunctionLibrary.gen.cpp.obj",
+			"ATPCInterpolationSpeed.gen.cpp.obj",
+			"ATPCLockOnTargetLocationComponent.gen.cpp.obj",
+			"ATPCTypes.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
+			"AdvancedThirdPersonCamera.cpp.obj",
+			"ATPCArrowDebugActor.cpp.obj",
+			"ATPCCameraBaseObject.cpp.obj",
+			"ATPCCameraComponent.cpp.obj",
+			"ATPCCameraFadingObject.cpp.obj",
+			"ATPCCameraFollowTerrainObject.cpp.obj",
+			"ATPCCameraFOVObject.cpp.obj",
+			"ATPCCameraLocationObject.cpp.obj"
+		],
+		"Module.AdvancedThirdPersonCamera.3.cpp.obj": [
+			"ATPCCameraLockOnTargetObject.cpp.obj",
+			"ATPCCameraModeDataAsset.cpp.obj",
+			"ATPCCameraModeScript.cpp.obj",
+			"ATPCCameraShakesObject.cpp.obj",
+			"ATPCCameraVolume.cpp.obj",
+			"ATPCConsoleCommands.cpp.obj",
+			"ATPCCustomVersion.cpp.obj",
+			"ATPCFunctionLibrary.cpp.obj",
+			"ATPCInterpolationSpeed.cpp.obj",
+			"ATPCLockOnTargetLocationComponent.cpp.obj",
+			"ATPCCameraModeScript_ChangeMovementSpeed.cpp.obj",
+			"ATPCCameraModeScript_PawnUseControllerRotation.cpp.obj",
+			"ATPCCameraModeScript_RotateActorToTarget.cpp.obj"
+		]
+	}
+}
