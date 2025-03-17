@@ -1,0 +1,54 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.6.1.0",
+	"FriendlyName": "SUDS Pro Dialogue",
+	"Description": "Advanced dialogue system driven by text scripts",
+	"Category": "Code Plugins",
+	"CreatedBy": "Old Doorways Ltd",
+	"CreatedByURL": "https://olddoorways.com",
+	"DocsURL": "https://olddoorways.com/sudspro/docs/",
+	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/98046b91d2d4470f8c10db3589b3640e",
+	"SupportURL": "",
+	"EngineVersion": "5.5.0",
+	"CanContainContent": true,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "SUDS",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"PlatformAllowList": [
+				"Win64",
+				"Linux"
+			]
+		},
+		{
+			"Name": "SUDSEditor",
+			"Type": "Editor",
+			"LoadingPhase": "Default",
+			"PlatformAllowList": [
+				"Win64",
+				"Linux"
+			]
+		},
+		{
+			"Name": "SudsPro",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"PlatformAllowList": [
+				"Win64",
+				"Linux"
+			]
+		},
+		{
+			"Name": "SudsProEditor",
+			"Type": "Editor",
+			"LoadingPhase": "Default",
+			"PlatformAllowList": [
+				"Win64",
+				"Linux"
+			]
+		}
+	]
+}

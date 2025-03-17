@@ -1,0 +1,31 @@
+[set DefaultCameraShot.MN-001 `BotCam`]
+[set DefaultCameraShot.Six `SixCam`]
+Six: Am I done yet? I thought you said there was gonna be combat.
+MN-001: You're Done!
+[event CameraTransition `Cam1`, 0.5, `EaseInOut`, 3]
+MN-001: You learned about SudsPro...
+[event CameraTransition `Cam2`, 0.5, `EaseInOut`, 3]
+MN-001: Cel-Shading...
+[event CameraTransition `Cam3`, 0.5, `EaseInOut`, 3]
+MN-001: Accurig...
+[event CameraTransition `Cam4`, 0.5, `EaseInOut`, 3]
+MN-001: And our fantastic character models, Concepted by Damien and modeled by Alistair!
+Six: ... So What the hell did the other guys do?
+MN-001: ... Good question.
+MN-001: Maybe they rigged and imported them?
+MN-001: I think Cade did all the dialogue and tech implementation...
+MN-001: And Guneet did what's coming next.
+Six: Combat?
+MN-001: Not so fast! There's two choices here.
+	The combat rewrite isn't finished!
+MN-001: Look at the two teleporters here!
+MN-001: If you take the Blue Pill...
+	You'll try Guneet's C++ rewrite!
+MN-001: He even added guns!
+Six: My kinda guy.
+MN-001: And if you take the Red Pill...
+	It'll just throw you to a room to try out the original
+	Blueprint based combat!
+Six: Everything's gotta be so complicated with you guys.
+
+

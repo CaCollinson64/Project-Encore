@@ -1,0 +1,15 @@
+[set DefaultCameraShot.Pink `BotCam`]
+[set DefaultCameraShot.Six `SixCam`]
+Pink: Six.
+Six: Glasses.
+Six: Out quietly brooding as usual?
+Pink: Tch... I've been with you the entire time.
+Six: Now just what the hell is that supposed to mean?
+[event CameraTransition `BotCam`, 0.5, `EaseInOut`, 3]
+Pink: Try hitting the Swap button.
+	You can swap between both of us instantly.
+Six: That's some fancy hair physics.
+Pink: You're sounding like one of the Drones.
+Pink: I can't trigger dialogue boxes yet, though.
+Six: You mean you're too shy.
+Pink: ...
