@@ -1,0 +1,12 @@
+[set DefaultCameraShot.MN-001 `BotCam`]
+[set DefaultCameraShot.Six `SixCam`]
+MN-001: This room's here to show off Cel-Shaded Lights.
+MN-001: When you're ready to leave, try hitting the JUMP button
+	to climb out of here.
+MN-001: Did you notice... Your Hat and Poncho responded to the physics when you fell?
+[event CameraTransition `SixCam`, 0.5, `EaseInOut`, 3]
+Six: They do seem rather soft and... Physically based.
+MN-001: That's Right! We're using KawaiiPhysics as our middleware.
+	It's the same FOSS Physics used in St*llar Bl*de.
+MN-001: It's as easy as defining the bones in your Animation Blueprint!
+Six: I have no clue what any of these words mean.

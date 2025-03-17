@@ -1,0 +1,18 @@
+[set DefaultCameraShot.MN-001 `BotCam`]
+[set DefaultCameraShot.Six `SixCam`]
+MN-001: Can't jump high enough?
+MN-001: You can double jump.
+MN-001: By the way...
+[event CameraTransition `SixCam`, 0.5, `EaseInOut`, 3]
+Six: Is this another tech middleware explanation?
+MN-001: That's Right! Check out how well the anims are rigged.
+	We're using Accurig!
+MN-001: Once that's done, We retarget to Manny.
+MN-001: Using Accurig gives us 100% accuracy to the UE4 Manny.
+MN-001: This means every animation on the UE store should work!
+MN-001: For anything else, like ponytails or hats...
+	They're attached afterwards, with KawaiiPhys Bones!
+Six: What about faces?
+MN-001: What?
+Six: Why don't I have a face texture?
+MN-001: We're porting these models to VRchat. You can wait a little, right?
