@@ -1,9 +1,0 @@
-{
-	"RemapUnityFiles": 
-	{
-		"Module.StylishCombatStarterKit.cpp.obj": [
-			"PerModuleInline.gen.cpp.obj",
-			"StylishCombatStarterKit.cpp.obj"
-		]
-	}
-}
