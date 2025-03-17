@@ -1,7 +1,14 @@
 {
 	"SourceFiles": [
-		"D:\\Git\\Project-Encore\\StylishCombatStarterKit\\Plugins\\KawaiiPhysics\\Source\\KawaiiPhysicsEd\\KawaiiPhysicsEd.Build.cs",
-		"D:\\Git\\Project-Encore\\StylishCombatStarterKit\\Plugins\\KawaiiPhysics\\Source\\KawaiiPhysics\\KawaiiPhysics.Build.cs"
+		"C:\\Git\\Project-Encore\\StylishCombatStarterKit\\Plugins\\KawaiiPhysics\\Source\\KawaiiPhysicsEd\\KawaiiPhysicsEd.Build.cs",
+		"C:\\Git\\Project-Encore\\StylishCombatStarterKit\\Plugins\\KawaiiPhysics\\Source\\KawaiiPhysics\\KawaiiPhysics.Build.cs",
+		"C:\\Git\\Project-Encore\\StylishCombatStarterKit\\Plugins\\StevesUEHelpers\\Source\\StevesUEHelpersEd\\StevesUEHelpersEd.Build.cs",
+		"C:\\Git\\Project-Encore\\StylishCombatStarterKit\\Plugins\\StevesUEHelpers\\Source\\StevesUEHelpers\\StevesUEHelpers.Build.cs",
+		"C:\\Git\\Project-Encore\\StylishCombatStarterKit\\Intermediate\\Source\\StylishCombatStarterKit.Build.cs",
+		"C:\\Git\\Project-Encore\\StylishCombatStarterKit\\Intermediate\\Source\\StylishCombatStarterKit.Target.cs",
+		"C:\\Git\\Project-Encore\\StylishCombatStarterKit\\Intermediate\\Source\\StylishCombatStarterKitClient.Target.cs",
+		"C:\\Git\\Project-Encore\\StylishCombatStarterKit\\Intermediate\\Source\\StylishCombatStarterKitEditor.Target.cs",
+		"C:\\Git\\Project-Encore\\StylishCombatStarterKit\\Intermediate\\Source\\StylishCombatStarterKitServer.Target.cs"
 	],
 	"EngineVersion": "5.5.3"
 }

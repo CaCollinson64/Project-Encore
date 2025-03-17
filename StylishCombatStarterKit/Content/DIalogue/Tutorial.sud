@@ -1,0 +1,13 @@
+MN-001: Welcome to the Prototype Gym!
+MN-001: I'm here to test the dialogue system.
+MN-001: Somebody couldn't get a finished level on time. So this is more of a... Tech museum.
+Six: Well, I'll be damned. We got a talking Drone.
+MN-001: That's right! 
+MN-001: You've probably figured how to move..
+MN-001: But hit the ENTER key or the START key, and you'll get a whole screen of combat controls!
+MN-001: Once you're done talking to me, try hitting the SWAP key.
+MN-001: You'll swap to the second character...
+MN-001: Conductor Pink!
+MN-001: He's a bit shy though, so he's not coded to start dialogue yet.
+Six: Sounds about right.
+[gotoend]

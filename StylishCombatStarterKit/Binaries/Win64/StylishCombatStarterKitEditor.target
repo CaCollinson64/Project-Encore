@@ -34,18 +34,6 @@
 			"Type": "RequiredResource"
 		},
 		{
-			"Path": "$(ProjectDir)/Plugins/AdvancedThirdPersonCamera/Binaries/Win64/UnrealEditor-AdvancedThirdPersonCamera.dll",
-			"Type": "DynamicLibrary"
-		},
-		{
-			"Path": "$(ProjectDir)/Plugins/AdvancedThirdPersonCamera/Binaries/Win64/UnrealEditor-AdvancedThirdPersonCamera.pdb",
-			"Type": "SymbolFile"
-		},
-		{
-			"Path": "$(ProjectDir)/Plugins/AdvancedThirdPersonCamera/Binaries/Win64/UnrealEditor.modules",
-			"Type": "RequiredResource"
-		},
-		{
 			"Path": "$(ProjectDir)/Plugins/KawaiiPhysics/Binaries/Win64/UnrealEditor-KawaiiPhysics.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -63,6 +51,26 @@
 		},
 		{
 			"Path": "$(ProjectDir)/Plugins/KawaiiPhysics/Binaries/Win64/UnrealEditor.modules",
+			"Type": "RequiredResource"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/StevesUEHelpers/Binaries/Win64/UnrealEditor-StevesUEHelpers.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/StevesUEHelpers/Binaries/Win64/UnrealEditor-StevesUEHelpers.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/StevesUEHelpers/Binaries/Win64/UnrealEditor-StevesUEHelpersEd.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/StevesUEHelpers/Binaries/Win64/UnrealEditor-StevesUEHelpersEd.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/StevesUEHelpers/Binaries/Win64/UnrealEditor.modules",
 			"Type": "RequiredResource"
 		},
 		{
@@ -2878,14 +2886,6 @@
 			"Type": "RequiredResource"
 		},
 		{
-			"Path": "$(EngineDir)/Plugins/Animation/MotionWarping/Binaries/Win64/UnrealEditor-MotionWarping.dll",
-			"Type": "DynamicLibrary"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Animation/MotionWarping/Binaries/Win64/UnrealEditor.modules",
-			"Type": "RequiredResource"
-		},
-		{
 			"Path": "$(EngineDir)/Plugins/Animation/RigLogic/Binaries/Win64/UnrealEditor-RigLogicDeveloper.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -3682,14 +3682,6 @@
 			"Type": "RequiredResource"
 		},
 		{
-			"Path": "$(EngineDir)/Plugins/Experimental/GameplayTargetingSystem/Binaries/Win64/UnrealEditor-TargetingSystem.dll",
-			"Type": "DynamicLibrary"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Experimental/GameplayTargetingSystem/Binaries/Win64/UnrealEditor.modules",
-			"Type": "RequiredResource"
-		},
-		{
 			"Path": "$(EngineDir)/Plugins/Experimental/GeometryCollectionPlugin/Binaries/Win64/UnrealEditor-GeometryCollectionDepNodes.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -4015,6 +4007,42 @@
 		},
 		{
 			"Path": "$(EngineDir)/Plugins/Interchange/Runtime/Binaries/Win64/UnrealEditor.modules",
+			"Type": "RequiredResource"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Marketplace/SUDSProDa4bdaa94d33fV5/Binaries/Win64/UnrealEditor-SUDS.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Marketplace/SUDSProDa4bdaa94d33fV5/Binaries/Win64/UnrealEditor-SUDS.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Marketplace/SUDSProDa4bdaa94d33fV5/Binaries/Win64/UnrealEditor-SUDSEditor.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Marketplace/SUDSProDa4bdaa94d33fV5/Binaries/Win64/UnrealEditor-SUDSEditor.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Marketplace/SUDSProDa4bdaa94d33fV5/Binaries/Win64/UnrealEditor-SudsPro.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Marketplace/SUDSProDa4bdaa94d33fV5/Binaries/Win64/UnrealEditor-SudsPro.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Marketplace/SUDSProDa4bdaa94d33fV5/Binaries/Win64/UnrealEditor-SudsProEditor.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Marketplace/SUDSProDa4bdaa94d33fV5/Binaries/Win64/UnrealEditor-SudsProEditor.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Marketplace/SUDSProDa4bdaa94d33fV5/Binaries/Win64/UnrealEditor.modules",
 			"Type": "RequiredResource"
 		},
 		{
@@ -4450,18 +4478,6 @@
 			"Type": "RequiredResource"
 		},
 		{
-			"Path": "$(EngineDir)/Plugins/Runtime/DataRegistry/Binaries/Win64/UnrealEditor-DataRegistry.dll",
-			"Type": "DynamicLibrary"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Runtime/DataRegistry/Binaries/Win64/UnrealEditor-DataRegistryEditor.dll",
-			"Type": "DynamicLibrary"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Runtime/DataRegistry/Binaries/Win64/UnrealEditor.modules",
-			"Type": "RequiredResource"
-		},
-		{
 			"Path": "$(EngineDir)/Plugins/Runtime/Database/SQLiteCore/Binaries/Win64/UnrealEditor-SQLiteCore.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -4475,18 +4491,6 @@
 		},
 		{
 			"Path": "$(EngineDir)/Plugins/Runtime/ExampleDeviceProfileSelector/Binaries/Win64/UnrealEditor.modules",
-			"Type": "RequiredResource"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Runtime/GameplayAbilities/Binaries/Win64/UnrealEditor-GameplayAbilities.dll",
-			"Type": "DynamicLibrary"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Runtime/GameplayAbilities/Binaries/Win64/UnrealEditor-GameplayAbilitiesEditor.dll",
-			"Type": "DynamicLibrary"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Runtime/GameplayAbilities/Binaries/Win64/UnrealEditor.modules",
 			"Type": "RequiredResource"
 		},
 		{
@@ -4904,11 +4908,11 @@
 	],
 	"RuntimeDependencies": [
 		{
-			"Path": "$(ProjectDir)/Plugins/AdvancedThirdPersonCamera/AdvancedThirdPersonCamera.uplugin",
+			"Path": "$(ProjectDir)/Plugins/KawaiiPhysics/KawaiiPhysics.uplugin",
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(ProjectDir)/Plugins/KawaiiPhysics/KawaiiPhysics.uplugin",
+			"Path": "$(ProjectDir)/Plugins/StevesUEHelpers/StevesUEHelpers.uplugin",
 			"Type": "UFS"
 		},
 		{
@@ -29932,10 +29936,6 @@
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Plugins/Animation/MotionWarping/MotionWarping.uplugin",
-			"Type": "UFS"
-		},
-		{
 			"Path": "$(EngineDir)/Plugins/Animation/RigLogic/RigLogic.uplugin",
 			"Type": "UFS"
 		},
@@ -30268,10 +30268,6 @@
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Plugins/Experimental/GameplayTargetingSystem/TargetingSystem.uplugin",
-			"Type": "UFS"
-		},
-		{
 			"Path": "$(EngineDir)/Plugins/Experimental/GeometryCollectionPlugin/GeometryCollectionPlugin.uplugin",
 			"Type": "UFS"
 		},
@@ -30353,6 +30349,10 @@
 		},
 		{
 			"Path": "$(EngineDir)/Plugins/Interchange/Runtime/Interchange.uplugin",
+			"Type": "UFS"
+		},
+		{
+			"Path": "$(EngineDir)/Plugins/Marketplace/SUDSProDa4bdaa94d33fV5/SudsPro.uplugin",
 			"Type": "UFS"
 		},
 		{
@@ -30524,19 +30524,11 @@
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(EngineDir)/Plugins/Runtime/DataRegistry/DataRegistry.uplugin",
-			"Type": "UFS"
-		},
-		{
 			"Path": "$(EngineDir)/Plugins/Runtime/Database/SQLiteCore/SQLiteCore.uplugin",
 			"Type": "UFS"
 		},
 		{
 			"Path": "$(EngineDir)/Plugins/Runtime/ExampleDeviceProfileSelector/ExampleDeviceProfileSelector.uplugin",
-			"Type": "UFS"
-		},
-		{
-			"Path": "$(EngineDir)/Plugins/Runtime/GameplayAbilities/GameplayAbilities.uplugin",
 			"Type": "UFS"
 		},
 		{
@@ -30666,7 +30658,6 @@
 		"ActorLayerUtilities",
 		"ActorSequence",
 		"AdvancedRenamer",
-		"AdvancedThirdPersonCamera",
 		"AlembicImporter",
 		"AndroidDeviceProfileSelector",
 		"AndroidFileServer",
@@ -30720,7 +30711,6 @@
 		"CryptoKeys",
 		"CurveEditorTools",
 		"CustomMeshComponent",
-		"DataRegistry",
 		"DataValidation",
 		"Dataflow",
 		"DatasmithContent",
@@ -30743,7 +30733,6 @@
 		"Fracture",
 		"FullBodyIK",
 		"GLTFExporter",
-		"GameplayAbilities",
 		"GameplayCameras",
 		"GameplayTagsEditor",
 		"GeometryCache",
@@ -30787,7 +30776,6 @@
 		"MobileLauncherProfileWizard",
 		"MobilePatchingUtils",
 		"ModelingToolsEditorMode",
-		"MotionWarping",
 		"MsQuic",
 		"N10XSourceCodeAccess",
 		"NFORDenoise",
@@ -30834,13 +30822,14 @@
 		"SoundFields",
 		"SpeedTreeImporter",
 		"StateTree",
+		"StevesUEHelpers",
 		"StructUtils",
 		"StudioTelemetry",
 		"StylusInput",
 		"SubversionSourceControl",
+		"SudsPro",
 		"Synthesis",
 		"Takes",
-		"TargetingSystem",
 		"TcpMessaging",
 		"TemplateSequence",
 		"TextureFormatOodle",

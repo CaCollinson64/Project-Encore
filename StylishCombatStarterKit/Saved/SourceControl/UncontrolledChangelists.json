@@ -24,7 +24,26 @@
 				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/CharacterAssets/SixImportTest/Six_011_Skeleton.uasset",
 				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/CharacterAssets/SixImportTest/SK_PonchoTextured.uasset",
 				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/CharacterAssets/SixImportTest/SKM_PonchoTextured.uasset",
-				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/CharacterAssets/SixImportTest/SKM_SixPoncho.uasset"
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/CharacterAssets/SixImportTest/SKM_SixPoncho.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/StylishCombatKit/Characters/B_DialogueBot.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/StylishCombatKit/Maps/Dialogue.umap",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/DIalogue/Tutorial.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/DIalogue/SUDS_Tutorial.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/DIalogue/DIalogueWidget.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/DIalogue/TextContainer.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/CharacterAssets/SixImportTest/M_PinkSKin_Inst1.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/CharacterAssets/SixImportTest/M_PinkArmor.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/CharacterAssets/PinkImportTest/Mats/M_PinkSKin.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/CharacterAssets/SixImportTest/Six_adjust_01_PhysicsAsset.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/CharacterAssets/SixImportTest/Six_adjust_01.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/CharacterAssets/SixImportTest/M_WhiteHair.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/StarterContent/Materials/M_Metal_Burnished_Steel.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/StylishCombatKit/Main/PC_CombatPlayerController.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/Demo/Blueprints/UI/Widget_DialogueContainer.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/Demo/Blueprints/UI/Widget_DialogueUI.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/Skybox/fe1e68d2-462c-4b64-81f5-3f8b9615222c_orig.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/Skybox/Skybox.uasset",
+				"C:/Git/Project-Encore/StylishCombatStarterKit/Content/NewBlueprint.uasset"
 			]
 		}
 	]

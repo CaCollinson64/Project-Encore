@@ -6,7 +6,8 @@
 /NAME:"UnrealEditor-StylishCombatStarterKit.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-"C:\Git\Project-Encore\StylishCombatStarterKit\Intermediate\Build\Win64\x64\StylishCombatStarterKitEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.InclOrderUnreal5_3.h.obj"
+"C:\Git\Project-Encore\StylishCombatStarterKit\Intermediate\Build\Win64\x64\StylishCombatStarterKitEditor\Development\Core\SharedPCH.Core.Project.ValApi.Cpp20.h.obj"
 "C:\Git\Project-Encore\StylishCombatStarterKit\Intermediate\Build\Win64\x64\UnrealEditor\Development\StylishCombatStarterKit\Module.StylishCombatStarterKit.cpp.obj"
+"C:\Git\Project-Encore\StylishCombatStarterKit\Intermediate\Build\Win64\x64\UnrealEditor\Development\StylishCombatStarterKit\StylishCombatStarterKit.cpp.obj"
 "C:\Git\Project-Encore\StylishCombatStarterKit\Intermediate\Build\Win64\x64\UnrealEditor\Development\StylishCombatStarterKit\Default.rc2.res"
 /OUT:"C:\Git\Project-Encore\StylishCombatStarterKit\Intermediate\Build\Win64\x64\UnrealEditor\Development\StylishCombatStarterKit\UnrealEditor-StylishCombatStarterKit.lib"

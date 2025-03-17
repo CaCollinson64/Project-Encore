@@ -3,7 +3,7 @@
     "Data": {
         "Source": "c:\\git\\project-encore\\stylishcombatstarterkit\\plugins\\kawaiiphysics\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\kawaiiphysicsed\\module.kawaiiphysicsed.cpp",
         "ProvidedModule": "",
-        "PCH": "c:\\git\\project-encore\\stylishcombatstarterkit\\intermediate\\build\\win64\\x64\\stylishcombatstarterkiteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.inclorderunreal5_3.h.pch",
+        "PCH": "c:\\git\\project-encore\\stylishcombatstarterkit\\intermediate\\build\\win64\\x64\\stylishcombatstarterkiteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
         "Includes": [
             "c:\\git\\project-encore\\stylishcombatstarterkit\\plugins\\kawaiiphysics\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\kawaiiphysicsed\\definitions.kawaiiphysicsed.h",
             "c:\\git\\project-encore\\stylishcombatstarterkit\\plugins\\kawaiiphysics\\intermediate\\build\\win64\\unrealeditor\\inc\\kawaiiphysicsed\\uht\\animgraphnode_kawaiiphysics.gen.cpp",
