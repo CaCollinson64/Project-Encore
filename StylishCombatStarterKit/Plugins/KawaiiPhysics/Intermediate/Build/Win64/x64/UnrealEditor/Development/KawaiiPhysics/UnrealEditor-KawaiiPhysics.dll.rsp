@@ -21,7 +21,7 @@
 /ALTERNATENAME:__imp___std_init_once_complete=__imp_InitOnceComplete
 /DELAYLOAD:"d3d12.dll"
 /DELAYLOAD:"DBGHELP.DLL"
-/LIBPATH:"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\lib\x64"
+/LIBPATH:"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\lib\x64"
 /LIBPATH:"C:\Program Files (x86)\Windows Kits\10\lib\10.0.22621.0\ucrt\x64"
 /LIBPATH:"C:\Program Files (x86)\Windows Kits\10\lib\10.0.22621.0\um\x64"
 /NODEFAULTLIB:"LIBCMT"
@@ -36,11 +36,11 @@
 /NODEFAULTLIB:"LIBCPD"
 /FUNCTIONPADMIN:6
 /NOIMPLIB
-"C:\Git\Project-Encore\StylishCombatStarterKit\Intermediate\Build\Win64\x64\StylishCombatStarterKitEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
-"C:\Git\Project-Encore\StylishCombatStarterKit\Plugins\KawaiiPhysics\Intermediate\Build\Win64\x64\UnrealEditor\Development\KawaiiPhysics\Module.KawaiiPhysics.1.cpp.obj"
-"C:\Git\Project-Encore\StylishCombatStarterKit\Plugins\KawaiiPhysics\Intermediate\Build\Win64\x64\UnrealEditor\Development\KawaiiPhysics\Module.KawaiiPhysics.2.cpp.obj"
-"C:\Git\Project-Encore\StylishCombatStarterKit\Plugins\KawaiiPhysics\Intermediate\Build\Win64\x64\UnrealEditor\Development\KawaiiPhysics\Module.KawaiiPhysics.3.cpp.obj"
-"C:\Git\Project-Encore\StylishCombatStarterKit\Plugins\KawaiiPhysics\Intermediate\Build\Win64\x64\UnrealEditor\Development\KawaiiPhysics\Default.rc2.res"
+"F:\Projects\Classes\Project-Encore\StylishCombatStarterKit\Intermediate\Build\Win64\x64\StylishCombatStarterKitEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.InclOrderUnreal5_3.h.obj"
+"F:\Projects\Classes\Project-Encore\StylishCombatStarterKit\Plugins\KawaiiPhysics\Intermediate\Build\Win64\x64\UnrealEditor\Development\KawaiiPhysics\Module.KawaiiPhysics.1.cpp.obj"
+"F:\Projects\Classes\Project-Encore\StylishCombatStarterKit\Plugins\KawaiiPhysics\Intermediate\Build\Win64\x64\UnrealEditor\Development\KawaiiPhysics\Module.KawaiiPhysics.2.cpp.obj"
+"F:\Projects\Classes\Project-Encore\StylishCombatStarterKit\Plugins\KawaiiPhysics\Intermediate\Build\Win64\x64\UnrealEditor\Development\KawaiiPhysics\Module.KawaiiPhysics.3.cpp.obj"
+"F:\Projects\Classes\Project-Encore\StylishCombatStarterKit\Plugins\KawaiiPhysics\Intermediate\Build\Win64\x64\UnrealEditor\Development\KawaiiPhysics\Default.rc2.res"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\CoreUObject\UnrealEditor-CoreUObject.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Engine\UnrealEditor-Engine.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Slate\UnrealEditor-Slate.lib"
@@ -74,6 +74,6 @@
 "synchronization.lib"
 "dwmapi.lib"
 "imm32.lib"
-/OUT:"C:\Git\Project-Encore\StylishCombatStarterKit\Plugins\KawaiiPhysics\Binaries\Win64\UnrealEditor-KawaiiPhysics.dll"
-/PDB:"C:\Git\Project-Encore\StylishCombatStarterKit\Plugins\KawaiiPhysics\Binaries\Win64\UnrealEditor-KawaiiPhysics.pdb"
+/OUT:"F:\Projects\Classes\Project-Encore\StylishCombatStarterKit\Plugins\KawaiiPhysics\Binaries\Win64\UnrealEditor-KawaiiPhysics.dll"
+/PDB:"F:\Projects\Classes\Project-Encore\StylishCombatStarterKit\Plugins\KawaiiPhysics\Binaries\Win64\UnrealEditor-KawaiiPhysics.pdb"
 /ignore:4078

@@ -6,7 +6,7 @@
 /NAME:"UnrealEditor-KawaiiPhysicsEd.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-"C:\Git\Project-Encore\StylishCombatStarterKit\Intermediate\Build\Win64\x64\UnrealEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
+"C:\Git\Project-Encore\StylishCombatStarterKit\Intermediate\Build\Win64\x64\StylishCombatStarterKitEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
 "C:\Git\Project-Encore\StylishCombatStarterKit\Plugins\KawaiiPhysics\Intermediate\Build\Win64\x64\UnrealEditor\Development\KawaiiPhysicsEd\Module.KawaiiPhysicsEd.cpp.obj"
 "C:\Git\Project-Encore\StylishCombatStarterKit\Plugins\KawaiiPhysics\Intermediate\Build\Win64\x64\UnrealEditor\Development\KawaiiPhysicsEd\Default.rc2.res"
 /OUT:"C:\Git\Project-Encore\StylishCombatStarterKit\Plugins\KawaiiPhysics\Intermediate\Build\Win64\x64\UnrealEditor\Development\KawaiiPhysicsEd\UnrealEditor-KawaiiPhysicsEd.lib"
