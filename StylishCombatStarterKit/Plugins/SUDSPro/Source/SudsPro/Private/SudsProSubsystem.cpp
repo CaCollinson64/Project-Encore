@@ -189,6 +189,8 @@ void USudsProSubsystem::DialogueStep()
 	if (!RunEvents())
 		return;
 
+	if (!CurrentDialogue) return;
+	
 	if (CurrentDialogue->IsEnded())
 	{
 		// It's possible that we got the dialogue finished notification, but we had events left to finish
