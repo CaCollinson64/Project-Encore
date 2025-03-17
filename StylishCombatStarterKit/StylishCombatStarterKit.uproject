@@ -40,7 +40,7 @@
 		},
 		{
 			"Name": "SudsPro",
-			"Enabled": true,
+			"Enabled": true
 		}
 	],
 	"AdditionalPluginDirectories": [
