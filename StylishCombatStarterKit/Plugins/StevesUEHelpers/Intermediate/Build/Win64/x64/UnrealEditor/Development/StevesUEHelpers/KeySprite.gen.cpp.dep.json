@@ -1,0 +1,21 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\git\\project-encore\\stylishcombatstarterkit\\plugins\\stevesuehelpers\\intermediate\\build\\win64\\unrealeditor\\inc\\stevesuehelpers\\uht\\keysprite.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\git\\project-encore\\stylishcombatstarterkit\\intermediate\\build\\win64\\x64\\stylishcombatstarterkiteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\git\\project-encore\\stylishcombatstarterkit\\plugins\\stevesuehelpers\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\stevesuehelpers\\definitions.stevesuehelpers.h",
+            "c:\\git\\project-encore\\stylishcombatstarterkit\\plugins\\stevesuehelpers\\source\\stevesuehelpers\\public\\stevesui\\keysprite.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\plugins\\2d\\paper2d\\source\\paper2d\\classes\\papersprite.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\plugins\\2d\\paper2d\\source\\paper2d\\classes\\spriteeditoronlytypes.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\plugins\\2d\\paper2d\\intermediate\\build\\win64\\unrealeditor\\inc\\paper2d\\uht\\spriteeditoronlytypes.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\public\\slate\\slatetextureatlasinterface.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\slatetextureatlasinterface.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\plugins\\2d\\paper2d\\intermediate\\build\\win64\\unrealeditor\\inc\\paper2d\\uht\\papersprite.generated.h",
+            "c:\\git\\project-encore\\stylishcombatstarterkit\\plugins\\stevesuehelpers\\intermediate\\build\\win64\\unrealeditor\\inc\\stevesuehelpers\\uht\\keysprite.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

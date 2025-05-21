@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\git\\project-encore\\stylishcombatstarterkit\\plugins\\stevesuehelpers\\source\\stevesuehelpersed\\private\\stevesuehelpersed.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\git\\project-encore\\stylishcombatstarterkit\\intermediate\\build\\win64\\x64\\stylishcombatstarterkiteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\git\\project-encore\\stylishcombatstarterkit\\plugins\\stevesuehelpers\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\stevesuehelpersed\\definitions.stevesuehelpersed.h",
+            "c:\\git\\project-encore\\stylishcombatstarterkit\\plugins\\stevesuehelpers\\source\\stevesuehelpersed\\public\\stevesuehelpersed.h",
+            "c:\\git\\project-encore\\stylishcombatstarterkit\\plugins\\stevesuehelpers\\source\\stevesuehelpersed\\private\\stevesfixeddatatablecustomisationlayout.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

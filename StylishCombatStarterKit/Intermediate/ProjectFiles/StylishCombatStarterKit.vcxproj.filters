@@ -1,0 +1,1133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\StylishCombatStarterKit.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\StylishCombatStarterKit.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\StylishCombatStarterKitEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.gitignore" />
+    <None Include="..\..\StylishCombatStarterKit.sln.DotSettings.user" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGameplayTags.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGameUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultSudsPro.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\StylishCombatStarterKit">
+      <UniqueIdentifier>{4A0B6D75-E4CE-396D-A44F-CAA4C58685F2}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\StylishCombatStarterKit\StylishCombatStarterKit.Build.cs">
+      <Filter>Source\StylishCombatStarterKit</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\StylishCombatStarterKit\StylishCombatStarterKit.cpp">
+      <Filter>Source\StylishCombatStarterKit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\StylishCombatStarterKit\StylishCombatStarterKit.h">
+      <Filter>Source\StylishCombatStarterKit</Filter>
+    </ClCompile>
+    <Filter Include="Source\StylishCombatStarterKit\Gameplay">
+      <UniqueIdentifier>{58493967-E73A-3990-BB9F-FF45244ED1C2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\StylishCombatStarterKit\Gameplay\Character">
+      <UniqueIdentifier>{4D798A0A-A7A3-3097-A0C0-F936C1DFCF35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\StylishCombatStarterKit\Gameplay\Character\Abilities">
+      <UniqueIdentifier>{9E510E72-8826-35BD-8C51-D8DABBC5B482}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\StylishCombatStarterKit\Gameplay\Character\Abilities\AbilitySubsystem.cpp">
+      <Filter>Source\StylishCombatStarterKit\Gameplay\Character\Abilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\StylishCombatStarterKit\Gameplay\Character\Abilities\AbilitySubsystem.h">
+      <Filter>Source\StylishCombatStarterKit\Gameplay\Character\Abilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\StylishCombatStarterKit\Gameplay\Character\Abilities\EncoreAbilities.cpp">
+      <Filter>Source\StylishCombatStarterKit\Gameplay\Character\Abilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\StylishCombatStarterKit\Gameplay\Character\Abilities\EncoreAbilities.h">
+      <Filter>Source\StylishCombatStarterKit\Gameplay\Character\Abilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\StylishCombatStarterKit\Gameplay\Character\Abilities\UAbilitySet.h">
+      <Filter>Source\StylishCombatStarterKit\Gameplay\Character\Abilities</Filter>
+    </ClCompile>
+    <Filter Include="Source\StylishCombatStarterKit\Gameplay\Character\Abilities\Attributes">
+      <UniqueIdentifier>{3C0AD129-C0FD-3364-8E94-B7C841B7BF74}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\StylishCombatStarterKit\Gameplay\Character\Abilities\Attributes\AttributeHelpers.h">
+      <Filter>Source\StylishCombatStarterKit\Gameplay\Character\Abilities\Attributes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\StylishCombatStarterKit\Gameplay\Character\Abilities\Attributes\StandardAttributeSet.cpp">
+      <Filter>Source\StylishCombatStarterKit\Gameplay\Character\Abilities\Attributes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\StylishCombatStarterKit\Gameplay\Character\Abilities\Attributes\StandardAttributeSet.h">
+      <Filter>Source\StylishCombatStarterKit\Gameplay\Character\Abilities\Attributes</Filter>
+    </ClCompile>
+    <Filter Include="Source\StylishCombatStarterKit\Gameplay\Character\BaseCharacter">
+      <UniqueIdentifier>{116CE4C2-886A-300F-B690-0DC0D03E8BBC}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\StylishCombatStarterKit\Gameplay\Character\BaseCharacter\BaseCharacter.cpp">
+      <Filter>Source\StylishCombatStarterKit\Gameplay\Character\BaseCharacter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\StylishCombatStarterKit\Gameplay\Character\BaseCharacter\BaseCharacter.h">
+      <Filter>Source\StylishCombatStarterKit\Gameplay\Character\BaseCharacter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\StylishCombatStarterKit\Gameplay\Character\BaseCharacter\BasePlayerController.cpp">
+      <Filter>Source\StylishCombatStarterKit\Gameplay\Character\BaseCharacter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\StylishCombatStarterKit\Gameplay\Character\BaseCharacter\BasePlayerController.h">
+      <Filter>Source\StylishCombatStarterKit\Gameplay\Character\BaseCharacter</Filter>
+    </ClCompile>
+    <Filter Include="Source\StylishCombatStarterKit\Gameplay\Character\Components">
+      <UniqueIdentifier>{85BE0B47-29E9-3E6C-B171-FFBBF2674E3A}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\StylishCombatStarterKit\Gameplay\Character\Components\DodgeComponent.cpp">
+      <Filter>Source\StylishCombatStarterKit\Gameplay\Character\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\StylishCombatStarterKit\Gameplay\Character\Components\DodgeComponent.h">
+      <Filter>Source\StylishCombatStarterKit\Gameplay\Character\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\StylishCombatStarterKit\Gameplay\Character\Components\ReplayComponent.cpp">
+      <Filter>Source\StylishCombatStarterKit\Gameplay\Character\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\StylishCombatStarterKit\Gameplay\Character\Components\ReplayComponent.h">
+      <Filter>Source\StylishCombatStarterKit\Gameplay\Character\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\StylishCombatStarterKit\Gameplay\Character\Components\TargetingComponent.cpp">
+      <Filter>Source\StylishCombatStarterKit\Gameplay\Character\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\StylishCombatStarterKit\Gameplay\Character\Components\TargetingComponent.h">
+      <Filter>Source\StylishCombatStarterKit\Gameplay\Character\Components</Filter>
+    </ClCompile>
+    <Filter Include="Source\StylishCombatStarterKit\Gameplay\Character\Components\BaseClasses">
+      <UniqueIdentifier>{07E51BE0-3705-3936-A265-C2873A2826D8}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\StylishCombatStarterKit\Gameplay\Character\Components\BaseClasses\InteroperableComponent.cpp">
+      <Filter>Source\StylishCombatStarterKit\Gameplay\Character\Components\BaseClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\StylishCombatStarterKit\Gameplay\Character\Components\BaseClasses\InteroperableComponent.h">
+      <Filter>Source\StylishCombatStarterKit\Gameplay\Character\Components\BaseClasses</Filter>
+    </ClCompile>
+    <Filter Include="Source\StylishCombatStarterKit\Gameplay\Character\Components\Fighting">
+      <UniqueIdentifier>{FA5F2A66-DB5F-39A3-9A71-F45492D427DE}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\StylishCombatStarterKit\Gameplay\Character\Components\Fighting\ComboChainComponent.cpp">
+      <Filter>Source\StylishCombatStarterKit\Gameplay\Character\Components\Fighting</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\StylishCombatStarterKit\Gameplay\Character\Components\Fighting\ComboChainComponent.h">
+      <Filter>Source\StylishCombatStarterKit\Gameplay\Character\Components\Fighting</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\StylishCombatStarterKit\Gameplay\Character\Components\Fighting\HitComponent.cpp">
+      <Filter>Source\StylishCombatStarterKit\Gameplay\Character\Components\Fighting</Filter>
+    </ClCompile>
+    <Filter Include="Source\StylishCombatStarterKit\Gameplay\Character\Components\Fighting\ComboPolicies">
+      <UniqueIdentifier>{8C218467-B408-38ED-AF3C-1BF3E5A12DAE}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\StylishCombatStarterKit\Gameplay\Character\Components\Fighting\ComboPolicies\ComboBlockPolicy.h">
+      <Filter>Source\StylishCombatStarterKit\Gameplay\Character\Components\Fighting\ComboPolicies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\StylishCombatStarterKit\Gameplay\Character\Components\Fighting\ComboPolicies\ComboHitPolicy.h">
+      <Filter>Source\StylishCombatStarterKit\Gameplay\Character\Components\Fighting\ComboPolicies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\StylishCombatStarterKit\Gameplay\Character\Components\Fighting\ComboPolicies\ComboStartPolicy.h">
+      <Filter>Source\StylishCombatStarterKit\Gameplay\Character\Components\Fighting\ComboPolicies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\StylishCombatStarterKit\Gameplay\Character\Components\Fighting\ComboPolicies\ComboValidationPolicy.h">
+      <Filter>Source\StylishCombatStarterKit\Gameplay\Character\Components\Fighting\ComboPolicies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\StylishCombatStarterKit\Gameplay\Character\Components\Fighting\ComboPolicies\PolicyBase.h">
+      <Filter>Source\StylishCombatStarterKit\Gameplay\Character\Components\Fighting\ComboPolicies</Filter>
+    </ClCompile>
+    <Filter Include="Source\StylishCombatStarterKit\Gameplay\Character\Components\Weapons">
+      <UniqueIdentifier>{06CF9070-22E1-3C6C-92FC-E9D480EC78C8}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\StylishCombatStarterKit\Gameplay\Character\Components\Weapons\WeaponActor.cpp">
+      <Filter>Source\StylishCombatStarterKit\Gameplay\Character\Components\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\StylishCombatStarterKit\Gameplay\Character\Components\Weapons\WeaponActor.h">
+      <Filter>Source\StylishCombatStarterKit\Gameplay\Character\Components\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\StylishCombatStarterKit\Gameplay\Character\Components\Weapons\WeaponComponent.cpp">
+      <Filter>Source\StylishCombatStarterKit\Gameplay\Character\Components\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\StylishCombatStarterKit\Gameplay\Character\Components\Weapons\WeaponComponent.h">
+      <Filter>Source\StylishCombatStarterKit\Gameplay\Character\Components\Weapons</Filter>
+    </ClCompile>
+    <Filter Include="Source\StylishCombatStarterKit\Gameplay\Character\Inputs">
+      <UniqueIdentifier>{E837A187-4248-3CD2-8C30-9AC164321A93}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\StylishCombatStarterKit\Gameplay\Character\Inputs\ComboTypes.h">
+      <Filter>Source\StylishCombatStarterKit\Gameplay\Character\Inputs</Filter>
+    </ClCompile>
+    <Filter Include="Source\StylishCombatStarterKit\Gameplay\Character\Profile">
+      <UniqueIdentifier>{05FB25EC-42BC-3649-8A7C-3CCA5707D89E}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\StylishCombatStarterKit\Gameplay\Character\Profile\CharacterProfile.cpp">
+      <Filter>Source\StylishCombatStarterKit\Gameplay\Character\Profile</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\StylishCombatStarterKit\Gameplay\Character\Profile\CharacterProfile.h">
+      <Filter>Source\StylishCombatStarterKit\Gameplay\Character\Profile</Filter>
+    </ClCompile>
+    <Filter Include="Source\StylishCombatStarterKit\Gameplay\GameMode">
+      <UniqueIdentifier>{E8A3C62B-DA62-3430-B226-CFEB79E69CA6}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\StylishCombatStarterKit\Gameplay\GameMode\BaseGameMode.cpp">
+      <Filter>Source\StylishCombatStarterKit\Gameplay\GameMode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\StylishCombatStarterKit\Gameplay\GameMode\BaseGameMode.h">
+      <Filter>Source\StylishCombatStarterKit\Gameplay\GameMode</Filter>
+    </ClCompile>
+    <Filter Include="Plugins">
+      <UniqueIdentifier>{BB38096A-B391-30DC-A0D4-4F3EA6B44507}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\AdvancedThirdPersonCamera">
+      <UniqueIdentifier>{5376FD2C-78A1-3135-B839-BBD0CD40EBA9}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\AdvancedThirdPersonCamera\AdvancedThirdPersonCamera.uplugin">
+      <Filter>Plugins\AdvancedThirdPersonCamera</Filter>
+    </None>
+    <Filter Include="Plugins\AdvancedThirdPersonCamera\Resources">
+      <UniqueIdentifier>{ACF4A02A-C4DF-3321-BE64-D43FA3636957}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\AdvancedThirdPersonCamera\Resources\Icon128.png">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Resources</Filter>
+    </None>
+    <Filter Include="Plugins\KawaiiPhysics">
+      <UniqueIdentifier>{F03DF928-AE14-3B30-957B-A8332C91A8CC}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\KawaiiPhysics\KawaiiPhysics.uplugin">
+      <Filter>Plugins\KawaiiPhysics</Filter>
+    </None>
+    <Filter Include="Plugins\KawaiiPhysics\Resources">
+      <UniqueIdentifier>{A66AD565-CC33-3EE2-BDEB-44A2C9DA3C51}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\KawaiiPhysics\Resources\Icon128.png">
+      <Filter>Plugins\KawaiiPhysics\Resources</Filter>
+    </None>
+    <Filter Include="Plugins\StevesUEHelpers">
+      <UniqueIdentifier>{80C67786-60B3-3EC1-8719-5A95A427F9D1}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\StevesUEHelpers\StevesUEHelpers.uplugin">
+      <Filter>Plugins\StevesUEHelpers</Filter>
+    </None>
+    <Filter Include="Plugins\StevesUEHelpers\Resources">
+      <UniqueIdentifier>{F09D29D6-29B8-30E7-A9A0-0EC39E3A0FE6}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\StevesUEHelpers\Resources\gameinstance.png">
+      <Filter>Plugins\StevesUEHelpers\Resources</Filter>
+    </None>
+    <None Include="..\..\Plugins\StevesUEHelpers\Resources\HOptionDemo.gif">
+      <Filter>Plugins\StevesUEHelpers\Resources</Filter>
+    </None>
+    <None Include="..\..\Plugins\StevesUEHelpers\Resources\Icon.afphoto">
+      <Filter>Plugins\StevesUEHelpers\Resources</Filter>
+    </None>
+    <None Include="..\..\Plugins\StevesUEHelpers\Resources\Icon128.png">
+      <Filter>Plugins\StevesUEHelpers\Resources</Filter>
+    </None>
+    <None Include="..\..\Plugins\StevesUEHelpers\Resources\inputchangeevent.png">
+      <Filter>Plugins\StevesUEHelpers\Resources</Filter>
+    </None>
+    <None Include="..\..\Plugins\StevesUEHelpers\Resources\lastinput.png">
+      <Filter>Plugins\StevesUEHelpers\Resources</Filter>
+    </None>
+    <None Include="..\..\Plugins\StevesUEHelpers\Resources\menupushbyclass.png">
+      <Filter>Plugins\StevesUEHelpers\Resources</Filter>
+    </None>
+    <None Include="..\..\Plugins\StevesUEHelpers\Resources\optioncustomnav.png">
+      <Filter>Plugins\StevesUEHelpers\Resources</Filter>
+    </None>
+    <None Include="..\..\Plugins\StevesUEHelpers\Resources\popmenu.png">
+      <Filter>Plugins\StevesUEHelpers\Resources</Filter>
+    </None>
+    <None Include="..\..\Plugins\StevesUEHelpers\Resources\richtextdecoratorconfig.png">
+      <Filter>Plugins\StevesUEHelpers\Resources</Filter>
+    </None>
+    <None Include="..\..\Plugins\StevesUEHelpers\Resources\RichTextInputImageExample.gif">
+      <Filter>Plugins\StevesUEHelpers\Resources</Filter>
+    </None>
+    <None Include="..\..\Plugins\StevesUEHelpers\Resources\showingamenu.png">
+      <Filter>Plugins\StevesUEHelpers\Resources</Filter>
+    </None>
+    <None Include="..\..\Plugins\StevesUEHelpers\Resources\typewriterexample.gif">
+      <Filter>Plugins\StevesUEHelpers\Resources</Filter>
+    </None>
+    <None Include="..\..\Plugins\StevesUEHelpers\Resources\UInputImageDemo2.gif">
+      <Filter>Plugins\StevesUEHelpers\Resources</Filter>
+    </None>
+    <Filter Include="Plugins\SUDSPro">
+      <UniqueIdentifier>{11AB7DAB-54D1-3A99-9E32-88779021E6EC}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\SUDSPro\SudsPro.uplugin">
+      <Filter>Plugins\SUDSPro</Filter>
+    </None>
+    <Filter Include="Plugins\SUDSPro\Resources">
+      <UniqueIdentifier>{36DBC161-F764-3DB8-8B01-62E06D606061}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\SUDSPro\Resources\Icon128.png">
+      <Filter>Plugins\SUDSPro\Resources</Filter>
+    </None>
+    <Filter Include="Plugins\AdvancedThirdPersonCamera\Source">
+      <UniqueIdentifier>{7949B9B9-1940-3D18-9F11-5798FF4BFBFF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera">
+      <UniqueIdentifier>{8E6140AE-26FA-38C0-87D1-FF93F760713E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\AdvancedThirdPersonCamera.Build.cs">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera</Filter>
+    </None>
+    <Filter Include="Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private">
+      <UniqueIdentifier>{692D2226-7CB4-3F2A-850A-72ED94B90244}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private\AdvancedThirdPersonCamera.cpp">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private\ATPCArrowDebugActor.cpp">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private\ATPCCameraBaseObject.cpp">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private\ATPCCameraComponent.cpp">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private\ATPCCameraFadingObject.cpp">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private\ATPCCameraFollowTerrainObject.cpp">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private\ATPCCameraFOVObject.cpp">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private\ATPCCameraLocationObject.cpp">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private\ATPCCameraLockOnTargetObject.cpp">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private\ATPCCameraModeDataAsset.cpp">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private\ATPCCameraModeScript.cpp">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private\ATPCCameraShakesObject.cpp">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private\ATPCCameraVolume.cpp">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private\ATPCConsoleCommands.cpp">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private\ATPCCustomVersion.cpp">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private\ATPCFunctionLibrary.cpp">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private\ATPCInterpolationSpeed.cpp">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private\ATPCLockOnTargetLocationComponent.cpp">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private\CameraModeScripts">
+      <UniqueIdentifier>{7E2E535C-7074-3347-A3AE-2506492500A2}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private\CameraModeScripts\ATPCCameraModeScript_ChangeMovementSpeed.cpp">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private\CameraModeScripts</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private\CameraModeScripts\ATPCCameraModeScript_PawnUseControllerRotation.cpp">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private\CameraModeScripts</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private\CameraModeScripts\ATPCCameraModeScript_RotateActorToTarget.cpp">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Private\CameraModeScripts</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public">
+      <UniqueIdentifier>{0D2D6D4A-264E-3DEB-9E8A-EB93EBB48306}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public\AdvancedThirdPersonCamera.h">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public\ATPCArrowDebugActor.h">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public\ATPCCameraBaseObject.h">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public\ATPCCameraComponent.h">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public\ATPCCameraFadingObject.h">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public\ATPCCameraFollowTerrainObject.h">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public\ATPCCameraFOVObject.h">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public\ATPCCameraLocationObject.h">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public\ATPCCameraLockOnTargetObject.h">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public\ATPCCameraModeDataAsset.h">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public\ATPCCameraModeScript.h">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public\ATPCCameraShakesObject.h">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public\ATPCCameraVolume.h">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public\ATPCCustomVersion.h">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public\ATPCFunctionLibrary.h">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public\ATPCInterpolationSpeed.h">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public\ATPCLockOnTargetLocationComponent.h">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public\ATPCOffsetValue.h">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public\ATPCTypes.h">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public\CameraModeScripts">
+      <UniqueIdentifier>{2127A7A5-5511-34DB-855A-D565D5F9F909}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public\CameraModeScripts\ATPCCameraModeScript_ChangeMovementSpeed.h">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public\CameraModeScripts</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public\CameraModeScripts\ATPCCameraModeScript_PawnUseControllerRotation.h">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public\CameraModeScripts</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public\CameraModeScripts\ATPCCameraModeScript_RotateActorToTarget.h">
+      <Filter>Plugins\AdvancedThirdPersonCamera\Source\AdvancedThirdPersonCamera\Public\CameraModeScripts</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\KawaiiPhysics\Source">
+      <UniqueIdentifier>{C23C6680-9C54-399E-82F8-D742043C0642}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\KawaiiPhysics\Source\KawaiiPhysicsEd">
+      <UniqueIdentifier>{13E6E407-1926-3DDE-8F5C-D1307EDEC093}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\KawaiiPhysics\Source\KawaiiPhysicsEd\KawaiiPhysicsEd.Build.cs">
+      <Filter>Plugins\KawaiiPhysics\Source\KawaiiPhysicsEd</Filter>
+    </None>
+    <Filter Include="Plugins\KawaiiPhysics\Source\KawaiiPhysicsEd\Private">
+      <UniqueIdentifier>{E7372F2A-8C42-3875-BCDE-0A336F8AB423}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\KawaiiPhysics\Source\KawaiiPhysicsEd\Private\AnimGraphNode_KawaiiPhysics.cpp">
+      <Filter>Plugins\KawaiiPhysics\Source\KawaiiPhysicsEd\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\KawaiiPhysics\Source\KawaiiPhysicsEd\Private\KawaiiPhysicsEd.cpp">
+      <Filter>Plugins\KawaiiPhysics\Source\KawaiiPhysicsEd\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\KawaiiPhysics\Source\KawaiiPhysicsEd\Private\KawaiiPhysicsEditMode.cpp">
+      <Filter>Plugins\KawaiiPhysics\Source\KawaiiPhysicsEd\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\KawaiiPhysics\Source\KawaiiPhysicsEd\Public">
+      <UniqueIdentifier>{10EA19A5-52C0-3379-85C0-A8152782CF00}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\KawaiiPhysics\Source\KawaiiPhysicsEd\Public\AnimGraphNode_KawaiiPhysics.h">
+      <Filter>Plugins\KawaiiPhysics\Source\KawaiiPhysicsEd\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\KawaiiPhysics\Source\KawaiiPhysicsEd\Public\KawaiiPhysicsEd.h">
+      <Filter>Plugins\KawaiiPhysics\Source\KawaiiPhysicsEd\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\KawaiiPhysics\Source\KawaiiPhysicsEd\Public\KawaiiPhysicsEditMode.h">
+      <Filter>Plugins\KawaiiPhysics\Source\KawaiiPhysicsEd\Public</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\KawaiiPhysics\Source\KawaiiPhysics">
+      <UniqueIdentifier>{E1EA13B8-FADC-371D-81DA-95004566BBB4}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\KawaiiPhysics\Source\KawaiiPhysics\KawaiiPhysics.Build.cs">
+      <Filter>Plugins\KawaiiPhysics\Source\KawaiiPhysics</Filter>
+    </None>
+    <Filter Include="Plugins\KawaiiPhysics\Source\KawaiiPhysics\AnimNotifies">
+      <UniqueIdentifier>{450BA93E-16EE-3EC1-B10D-26C6D782B991}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\KawaiiPhysics\Source\KawaiiPhysics\AnimNotifies\AnimNotifyState_KawaiiPhysics.cpp">
+      <Filter>Plugins\KawaiiPhysics\Source\KawaiiPhysics\AnimNotifies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\KawaiiPhysics\Source\KawaiiPhysics\AnimNotifies\AnimNotifyState_KawaiiPhysics.h">
+      <Filter>Plugins\KawaiiPhysics\Source\KawaiiPhysics\AnimNotifies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\KawaiiPhysics\Source\KawaiiPhysics\AnimNotifies\AnimNotify_KawaiiPhysics.cpp">
+      <Filter>Plugins\KawaiiPhysics\Source\KawaiiPhysics\AnimNotifies</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\KawaiiPhysics\Source\KawaiiPhysics\AnimNotifies\AnimNotify_KawaiiPhysics.h">
+      <Filter>Plugins\KawaiiPhysics\Source\KawaiiPhysics\AnimNotifies</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\KawaiiPhysics\Source\KawaiiPhysics\Private">
+      <UniqueIdentifier>{B0463CB3-526E-3C41-9300-701B574398AE}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\KawaiiPhysics\Source\KawaiiPhysics\Private\AnimNode_KawaiiPhysics.cpp">
+      <Filter>Plugins\KawaiiPhysics\Source\KawaiiPhysics\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\KawaiiPhysics\Source\KawaiiPhysics\Private\KawaiiPhysics.cpp">
+      <Filter>Plugins\KawaiiPhysics\Source\KawaiiPhysics\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\KawaiiPhysics\Source\KawaiiPhysics\Private\KawaiiPhysicsBoneConstraintsDataAsset.cpp">
+      <Filter>Plugins\KawaiiPhysics\Source\KawaiiPhysics\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\KawaiiPhysics\Source\KawaiiPhysics\Private\KawaiiPhysicsCustomExternalForce.cpp">
+      <Filter>Plugins\KawaiiPhysics\Source\KawaiiPhysics\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\KawaiiPhysics\Source\KawaiiPhysics\Private\KawaiiPhysicsExternalForce.cpp">
+      <Filter>Plugins\KawaiiPhysics\Source\KawaiiPhysics\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\KawaiiPhysics\Source\KawaiiPhysics\Private\KawaiiPhysicsLibrary.cpp">
+      <Filter>Plugins\KawaiiPhysics\Source\KawaiiPhysics\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\KawaiiPhysics\Source\KawaiiPhysics\Private\KawaiiPhysicsLimitsDataAsset.cpp">
+      <Filter>Plugins\KawaiiPhysics\Source\KawaiiPhysics\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\KawaiiPhysics\Source\KawaiiPhysics\Public">
+      <UniqueIdentifier>{86EB5B68-F541-357C-AA6F-B56750E7D22D}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\KawaiiPhysics\Source\KawaiiPhysics\Public\AnimNode_KawaiiPhysics.h">
+      <Filter>Plugins\KawaiiPhysics\Source\KawaiiPhysics\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\KawaiiPhysics\Source\KawaiiPhysics\Public\KawaiiPhysics.h">
+      <Filter>Plugins\KawaiiPhysics\Source\KawaiiPhysics\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\KawaiiPhysics\Source\KawaiiPhysics\Public\KawaiiPhysicsBoneConstraintsDataAsset.h">
+      <Filter>Plugins\KawaiiPhysics\Source\KawaiiPhysics\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\KawaiiPhysics\Source\KawaiiPhysics\Public\KawaiiPhysicsCustomExternalForce.h">
+      <Filter>Plugins\KawaiiPhysics\Source\KawaiiPhysics\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\KawaiiPhysics\Source\KawaiiPhysics\Public\KawaiiPhysicsExternalForce.h">
+      <Filter>Plugins\KawaiiPhysics\Source\KawaiiPhysics\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\KawaiiPhysics\Source\KawaiiPhysics\Public\KawaiiPhysicsLibrary.h">
+      <Filter>Plugins\KawaiiPhysics\Source\KawaiiPhysics\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\KawaiiPhysics\Source\KawaiiPhysics\Public\KawaiiPhysicsLimitsDataAsset.h">
+      <Filter>Plugins\KawaiiPhysics\Source\KawaiiPhysics\Public</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\StevesUEHelpers\Source">
+      <UniqueIdentifier>{C3584DE7-7485-35DB-8DEE-3E9ACA67AD67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\StevesUEHelpers\Source\StevesUEHelpersEd">
+      <UniqueIdentifier>{FBB89D46-CFD9-3633-BE02-94113C0F01B7}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpersEd\StevesUEHelpersEd.Build.cs">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpersEd</Filter>
+    </None>
+    <Filter Include="Plugins\StevesUEHelpers\Source\StevesUEHelpersEd\Private">
+      <UniqueIdentifier>{0BE6C86F-94F5-3310-AEAB-DC28551B7F3D}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpersEd\Private\StevesFixedDataTableCustomisationLayout.cpp">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpersEd\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpersEd\Private\StevesFixedDataTableCustomisationLayout.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpersEd\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpersEd\Private\StevesUEHelpersEd.cpp">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpersEd\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\StevesUEHelpers\Source\StevesUEHelpersEd\Public">
+      <UniqueIdentifier>{7A4C5FFD-E368-3221-A6EA-C4D50A2FF070}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpersEd\Public\StevesUEHelpersEd.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpersEd\Public</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\StevesUEHelpers\Source\StevesUEHelpers">
+      <UniqueIdentifier>{CE19EC2D-A897-3E7B-B356-40EC232AF2F5}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\StevesUEHelpers.Build.cs">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers</Filter>
+    </None>
+    <Filter Include="Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private">
+      <UniqueIdentifier>{CF72E6C5-4EAE-3F14-BFD0-96495522E9E1}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesAssetHelpers.cpp">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesBPL.cpp">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesDebugRenderSceneProxy.cpp">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesDynamicNavMeshVolume.cpp">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesEasings.cpp">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesEditorVisComponent.cpp">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesGameSubsystem.cpp">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesGameViewportClientBase.cpp">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesLightFlicker.cpp">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesMathHelpers.cpp">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesPluginSettings.cpp">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesPooledActorSystem.cpp">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesReplicatedPhysicsActor.cpp">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesSpringArmComponent.cpp">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesTextureRenderTargetPool.cpp">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesUEHelpers.cpp">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesVisualLogger.cpp">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesUI">
+      <UniqueIdentifier>{41EDC7B3-5237-3C33-AF73-CEB36B64E626}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesUI\FocusableButton.cpp">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesUI\FocusableCheckBox.cpp">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesUI\FocusablePanel.cpp">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesUI\FocusableUserWidget.cpp">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesUI\FocusSystem.cpp">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesUI\InputImage.cpp">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesUI\MenuBase.cpp">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesUI\MenuStack.cpp">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesUI\OptionWidgetBase.cpp">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesUI\RichTextBlockInputImageDecorator.cpp">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesUI\SFocusableButton.cpp">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesUI\SFocusableButton.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesUI\SFocusableCheckBox.cpp">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesUI\SFocusableCheckBox.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesUI\SmoothChangingProgressBar.cpp">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesUI\StevesUI.cpp">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesUI\StevesUI.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesUI\TypewriterTextWidget.cpp">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Private\StevesUI</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public">
+      <UniqueIdentifier>{77F077F1-90E6-332A-9B7F-43D2B39F0531}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesAssetHelpers.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesBalancedRandomStream.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesBPL.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesDebugRenderSceneProxy.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesDynamicNavMeshVolume.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesEasings.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesEditorVisComponent.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesFixedDataTableRowHandle.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesGameSubsystem.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesGameViewportClientBase.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesHelperCommon.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesLightFlicker.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesMathHelpers.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesPluginSettings.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesPooledActor.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesPooledActorSystem.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesReplicatedPhysicsActor.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesSpringArmComponent.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesTextureRenderTargetPool.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesUEHelpers.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesUiHelpers.cpp">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesUiHelpers.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesVisualLogger.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesUI">
+      <UniqueIdentifier>{4668B10A-0EBC-3DD4-A689-444A5B72A179}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesUI\FocusableButton.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesUI\FocusableCheckBox.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesUI\FocusableInputInterceptorUserWidget.cpp">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesUI\FocusableInputInterceptorUserWidget.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesUI\FocusablePanel.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesUI\FocusableUserWidget.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesUI\FocusSystem.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesUI\InputImage.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesUI\KeySprite.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesUI\MenuBase.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesUI\MenuStack.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesUI\OptionWidgetBase.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesUI\RichTextBlockInputImageDecorator.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesUI\SmoothChangingProgressBar.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesUI\TypewriterTextWidget.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesUI\UiTheme.h">
+      <Filter>Plugins\StevesUEHelpers\Source\StevesUEHelpers\Public\StevesUI</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\SUDSPro\Source">
+      <UniqueIdentifier>{B5EEC6EC-385C-3B06-813F-1D50328E474B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\SUDSPro\Source\SUDSEditor">
+      <UniqueIdentifier>{BE74A03E-1AEB-3CC7-B183-4D4FBD0BDEC7}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\SUDSPro\Source\SUDSEditor\SUDSEditor.Build.cs">
+      <Filter>Plugins\SUDSPro\Source\SUDSEditor</Filter>
+    </None>
+    <Filter Include="Plugins\SUDSPro\Source\SUDSEditor\Private">
+      <UniqueIdentifier>{B8AF4FA6-7ED8-3262-B12E-2CBFE3A04C6F}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDSEditor\Private\SUDSEditor.cpp">
+      <Filter>Plugins\SUDSPro\Source\SUDSEditor\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDSEditor\Private\SUDSEditorScriptTools.cpp">
+      <Filter>Plugins\SUDSPro\Source\SUDSEditor\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDSEditor\Private\SUDSEditorSettings.cpp">
+      <Filter>Plugins\SUDSPro\Source\SUDSEditor\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDSEditor\Private\SUDSEditorToolkit.cpp">
+      <Filter>Plugins\SUDSPro\Source\SUDSEditor\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDSEditor\Private\SUDSEditorToolkit.h">
+      <Filter>Plugins\SUDSPro\Source\SUDSEditor\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDSEditor\Private\SUDSEditorVoiceOverTools.cpp">
+      <Filter>Plugins\SUDSPro\Source\SUDSEditor\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDSEditor\Private\SUDSMessageLogger.cpp">
+      <Filter>Plugins\SUDSPro\Source\SUDSEditor\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDSEditor\Private\SUDSScriptActions.cpp">
+      <Filter>Plugins\SUDSPro\Source\SUDSEditor\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDSEditor\Private\SUDSScriptFactory.cpp">
+      <Filter>Plugins\SUDSPro\Source\SUDSEditor\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDSEditor\Private\SUDSScriptImporter.cpp">
+      <Filter>Plugins\SUDSPro\Source\SUDSEditor\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDSEditor\Private\SUDSScriptReimportFactory.cpp">
+      <Filter>Plugins\SUDSPro\Source\SUDSEditor\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\SUDSPro\Source\SUDSEditor\Public">
+      <UniqueIdentifier>{3AAA9F82-C74D-3D2B-B74E-A06C2F486AB8}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDSEditor\Public\SUDSEditor.h">
+      <Filter>Plugins\SUDSPro\Source\SUDSEditor\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDSEditor\Public\SUDSEditorScriptTools.h">
+      <Filter>Plugins\SUDSPro\Source\SUDSEditor\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDSEditor\Public\SUDSEditorSettings.h">
+      <Filter>Plugins\SUDSPro\Source\SUDSEditor\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDSEditor\Public\SUDSEditorVoiceOverTools.h">
+      <Filter>Plugins\SUDSPro\Source\SUDSEditor\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDSEditor\Public\SUDSMessageLogger.h">
+      <Filter>Plugins\SUDSPro\Source\SUDSEditor\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDSEditor\Public\SUDSScriptActions.h">
+      <Filter>Plugins\SUDSPro\Source\SUDSEditor\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDSEditor\Public\SUDSScriptFactory.h">
+      <Filter>Plugins\SUDSPro\Source\SUDSEditor\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDSEditor\Public\SUDSScriptImporter.h">
+      <Filter>Plugins\SUDSPro\Source\SUDSEditor\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDSEditor\Public\SUDSScriptReimportFactory.h">
+      <Filter>Plugins\SUDSPro\Source\SUDSEditor\Public</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\SUDSPro\Source\SUDS">
+      <UniqueIdentifier>{40F4ED34-F7A5-379F-8ACA-F989F54E0D78}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\SUDSPro\Source\SUDS\SUDS.Build.cs">
+      <Filter>Plugins\SUDSPro\Source\SUDS</Filter>
+    </None>
+    <Filter Include="Plugins\SUDSPro\Source\SUDS\Private">
+      <UniqueIdentifier>{CE9568A5-C1F2-36BA-AB13-37AAAA927724}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDS\Private\SUDS.cpp">
+      <Filter>Plugins\SUDSPro\Source\SUDS\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDS\Private\SUDSCommon.cpp">
+      <Filter>Plugins\SUDSPro\Source\SUDS\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDS\Private\SUDSDialogue.cpp">
+      <Filter>Plugins\SUDSPro\Source\SUDS\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDS\Private\SUDSExpression.cpp">
+      <Filter>Plugins\SUDSPro\Source\SUDS\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDS\Private\SUDSInternal.h">
+      <Filter>Plugins\SUDSPro\Source\SUDS\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDS\Private\SUDSLibrary.cpp">
+      <Filter>Plugins\SUDSPro\Source\SUDS\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDS\Private\SUDSParticipant.cpp">
+      <Filter>Plugins\SUDSPro\Source\SUDS\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDS\Private\SUDSScript.cpp">
+      <Filter>Plugins\SUDSPro\Source\SUDS\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDS\Private\SUDSScriptEdge.cpp">
+      <Filter>Plugins\SUDSPro\Source\SUDS\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDS\Private\SUDSScriptNode.cpp">
+      <Filter>Plugins\SUDSPro\Source\SUDS\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDS\Private\SUDSScriptNodeEvent.cpp">
+      <Filter>Plugins\SUDSPro\Source\SUDS\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDS\Private\SUDSScriptNodeSet.cpp">
+      <Filter>Plugins\SUDSPro\Source\SUDS\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDS\Private\SUDSScriptNodeText.cpp">
+      <Filter>Plugins\SUDSPro\Source\SUDS\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDS\Private\SUDSSubsystem.cpp">
+      <Filter>Plugins\SUDSPro\Source\SUDS\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDS\Private\SUDSValue.cpp">
+      <Filter>Plugins\SUDSPro\Source\SUDS\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\SUDSPro\Source\SUDS\Public">
+      <UniqueIdentifier>{B80FFEA9-92A1-3B29-B4A5-C0A3E040D347}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDS\Public\SUDS.h">
+      <Filter>Plugins\SUDSPro\Source\SUDS\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDS\Public\SUDSCommon.h">
+      <Filter>Plugins\SUDSPro\Source\SUDS\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDS\Public\SUDSDialogue.h">
+      <Filter>Plugins\SUDSPro\Source\SUDS\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDS\Public\SUDSExpression.h">
+      <Filter>Plugins\SUDSPro\Source\SUDS\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDS\Public\SUDSLibrary.h">
+      <Filter>Plugins\SUDSPro\Source\SUDS\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDS\Public\SUDSParticipant.h">
+      <Filter>Plugins\SUDSPro\Source\SUDS\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDS\Public\SUDSScript.h">
+      <Filter>Plugins\SUDSPro\Source\SUDS\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDS\Public\SUDSScriptEdge.h">
+      <Filter>Plugins\SUDSPro\Source\SUDS\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDS\Public\SUDSScriptNode.h">
+      <Filter>Plugins\SUDSPro\Source\SUDS\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDS\Public\SUDSScriptNodeEvent.h">
+      <Filter>Plugins\SUDSPro\Source\SUDS\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDS\Public\SUDSScriptNodeGosub.h">
+      <Filter>Plugins\SUDSPro\Source\SUDS\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDS\Public\SUDSScriptNodeSet.h">
+      <Filter>Plugins\SUDSPro\Source\SUDS\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDS\Public\SUDSScriptNodeText.h">
+      <Filter>Plugins\SUDSPro\Source\SUDS\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDS\Public\SUDSSubsystem.h">
+      <Filter>Plugins\SUDSPro\Source\SUDS\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SUDS\Public\SUDSValue.h">
+      <Filter>Plugins\SUDSPro\Source\SUDS\Public</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\SUDSPro\Source\SudsProEditor">
+      <UniqueIdentifier>{BD745B10-D39A-3F0F-A2CE-8523D7B06EC2}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\SUDSPro\Source\SudsProEditor\SudsProEditor.Build.cs">
+      <Filter>Plugins\SUDSPro\Source\SudsProEditor</Filter>
+    </None>
+    <Filter Include="Plugins\SUDSPro\Source\SudsProEditor\Private">
+      <UniqueIdentifier>{802717AD-1FC7-3FA9-A396-6D911881E3F6}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SudsProEditor\Private\SudsProEditor.cpp">
+      <Filter>Plugins\SUDSPro\Source\SudsProEditor\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\SUDSPro\Source\SudsProEditor\Public">
+      <UniqueIdentifier>{93E7A967-B9E7-3B76-A199-2625AF1E7F48}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SudsProEditor\Public\SudsProEditor.h">
+      <Filter>Plugins\SUDSPro\Source\SudsProEditor\Public</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\SUDSPro\Source\SudsPro">
+      <UniqueIdentifier>{7736E509-9EC9-31FC-879C-BEBBEB063E17}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\SUDSPro\Source\SudsPro\SudsPro.Build.cs">
+      <Filter>Plugins\SUDSPro\Source\SudsPro</Filter>
+    </None>
+    <Filter Include="Plugins\SUDSPro\Source\SudsPro\Private">
+      <UniqueIdentifier>{98A73D5F-D575-3CDA-A18B-15D4A8C41B95}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SudsPro\Private\SudsPro.cpp">
+      <Filter>Plugins\SUDSPro\Source\SudsPro\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SudsPro\Private\SudsProCommon.cpp">
+      <Filter>Plugins\SUDSPro\Source\SudsPro\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SudsPro\Private\SudsProDialogueExtension.cpp">
+      <Filter>Plugins\SUDSPro\Source\SudsPro\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SudsPro\Private\SudsProLibrary.cpp">
+      <Filter>Plugins\SUDSPro\Source\SudsPro\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SudsPro\Private\SudsProMath.cpp">
+      <Filter>Plugins\SUDSPro\Source\SudsPro\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SudsPro\Private\SudsProRunner.cpp">
+      <Filter>Plugins\SUDSPro\Source\SudsPro\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SudsPro\Private\SudsProSettings.cpp">
+      <Filter>Plugins\SUDSPro\Source\SudsPro\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SudsPro\Private\SudsProSubsystem.cpp">
+      <Filter>Plugins\SUDSPro\Source\SudsPro\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SudsPro\Private\SudsProUiLink.cpp">
+      <Filter>Plugins\SUDSPro\Source\SudsPro\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\SUDSPro\Source\SudsPro\Private\Extensions">
+      <UniqueIdentifier>{7103A16F-B4D8-3E75-8C60-AD188861281F}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SudsPro\Private\Extensions\SudsProCameraModifier.cpp">
+      <Filter>Plugins\SUDSPro\Source\SudsPro\Private\Extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SudsPro\Private\Extensions\SudsProCameraModifier.h">
+      <Filter>Plugins\SUDSPro\Source\SudsPro\Private\Extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SudsPro\Private\Extensions\SudsProCameraShotProvider.cpp">
+      <Filter>Plugins\SUDSPro\Source\SudsPro\Private\Extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SudsPro\Private\Extensions\SudsProExtCameraTools.cpp">
+      <Filter>Plugins\SUDSPro\Source\SudsPro\Private\Extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SudsPro\Private\Extensions\SudsProExtCharacterTools.cpp">
+      <Filter>Plugins\SUDSPro\Source\SudsPro\Private\Extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SudsPro\Private\Extensions\SudsProExtSequenceTools.cpp">
+      <Filter>Plugins\SUDSPro\Source\SudsPro\Private\Extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SudsPro\Private\Extensions\SudsProExtWait.cpp">
+      <Filter>Plugins\SUDSPro\Source\SudsPro\Private\Extensions</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\SUDSPro\Source\SudsPro\Public">
+      <UniqueIdentifier>{CB3DE9FC-FDC9-32A2-B3A2-8C6CD87D6A21}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SudsPro\Public\SudsPro.h">
+      <Filter>Plugins\SUDSPro\Source\SudsPro\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SudsPro\Public\SudsProCommon.h">
+      <Filter>Plugins\SUDSPro\Source\SudsPro\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SudsPro\Public\SudsProDialogueExtension.h">
+      <Filter>Plugins\SUDSPro\Source\SudsPro\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SudsPro\Public\SudsProLibrary.h">
+      <Filter>Plugins\SUDSPro\Source\SudsPro\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SudsPro\Public\SudsProMath.h">
+      <Filter>Plugins\SUDSPro\Source\SudsPro\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SudsPro\Public\SudsProRunner.h">
+      <Filter>Plugins\SUDSPro\Source\SudsPro\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SudsPro\Public\SudsProSettings.h">
+      <Filter>Plugins\SUDSPro\Source\SudsPro\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SudsPro\Public\SudsProSubsystem.h">
+      <Filter>Plugins\SUDSPro\Source\SudsPro\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SudsPro\Public\SudsProUiLink.h">
+      <Filter>Plugins\SUDSPro\Source\SudsPro\Public</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\SUDSPro\Source\SudsPro\Public\Extensions">
+      <UniqueIdentifier>{87087FF5-1DDC-374F-BE7E-16C708F001D2}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SudsPro\Public\Extensions\SudsProAnimationProvider.h">
+      <Filter>Plugins\SUDSPro\Source\SudsPro\Public\Extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SudsPro\Public\Extensions\SudsProCameraShotProvider.h">
+      <Filter>Plugins\SUDSPro\Source\SudsPro\Public\Extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SudsPro\Public\Extensions\SudsProCharacter.h">
+      <Filter>Plugins\SUDSPro\Source\SudsPro\Public\Extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SudsPro\Public\Extensions\SudsProExtCameraTools.h">
+      <Filter>Plugins\SUDSPro\Source\SudsPro\Public\Extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SudsPro\Public\Extensions\SudsProExtCharacterTools.h">
+      <Filter>Plugins\SUDSPro\Source\SudsPro\Public\Extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SudsPro\Public\Extensions\SudsProExtSequenceTools.h">
+      <Filter>Plugins\SUDSPro\Source\SudsPro\Public\Extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SudsPro\Public\Extensions\SudsProExtWait.h">
+      <Filter>Plugins\SUDSPro\Source\SudsPro\Public\Extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SudsPro\Public\Extensions\SudsProMarkProvider.h">
+      <Filter>Plugins\SUDSPro\Source\SudsPro\Public\Extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SudsPro\Public\Extensions\SudsProQueuedEventHandler.h">
+      <Filter>Plugins\SUDSPro\Source\SudsPro\Public\Extensions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SUDSPro\Source\SudsPro\Public\Extensions\SudsProSequenceProvider.h">
+      <Filter>Plugins\SUDSPro\Source\SudsPro\Public\Extensions</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

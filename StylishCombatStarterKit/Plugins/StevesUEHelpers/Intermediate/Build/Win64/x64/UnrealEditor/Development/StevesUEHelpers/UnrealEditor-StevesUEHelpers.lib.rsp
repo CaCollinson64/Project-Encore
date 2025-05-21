@@ -1,0 +1,14 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-StevesUEHelpers.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Git\Project-Encore\StylishCombatStarterKit\Intermediate\Build\Win64\x64\StylishCombatStarterKitEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.InclOrderUnreal5_3.h.obj"
+"C:\Git\Project-Encore\StylishCombatStarterKit\Plugins\StevesUEHelpers\Intermediate\Build\Win64\x64\UnrealEditor\Development\StevesUEHelpers\Module.StevesUEHelpers.1.cpp.obj"
+"C:\Git\Project-Encore\StylishCombatStarterKit\Plugins\StevesUEHelpers\Intermediate\Build\Win64\x64\UnrealEditor\Development\StevesUEHelpers\Module.StevesUEHelpers.2.cpp.obj"
+"C:\Git\Project-Encore\StylishCombatStarterKit\Plugins\StevesUEHelpers\Intermediate\Build\Win64\x64\UnrealEditor\Development\StevesUEHelpers\Module.StevesUEHelpers.3.cpp.obj"
+"C:\Git\Project-Encore\StylishCombatStarterKit\Plugins\StevesUEHelpers\Intermediate\Build\Win64\x64\UnrealEditor\Development\StevesUEHelpers\Default.rc2.res"
+/OUT:"C:\Git\Project-Encore\StylishCombatStarterKit\Plugins\StevesUEHelpers\Intermediate\Build\Win64\x64\UnrealEditor\Development\StevesUEHelpers\UnrealEditor-StevesUEHelpers.lib"

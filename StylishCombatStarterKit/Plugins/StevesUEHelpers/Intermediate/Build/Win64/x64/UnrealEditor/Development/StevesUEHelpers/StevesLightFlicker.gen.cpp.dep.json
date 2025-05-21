@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\git\\project-encore\\stylishcombatstarterkit\\plugins\\stevesuehelpers\\intermediate\\build\\win64\\unrealeditor\\inc\\stevesuehelpers\\uht\\steveslightflicker.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\git\\project-encore\\stylishcombatstarterkit\\intermediate\\build\\win64\\x64\\stylishcombatstarterkiteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\git\\project-encore\\stylishcombatstarterkit\\plugins\\stevesuehelpers\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\stevesuehelpers\\definitions.stevesuehelpers.h",
+            "c:\\git\\project-encore\\stylishcombatstarterkit\\plugins\\stevesuehelpers\\source\\stevesuehelpers\\public\\steveslightflicker.h",
+            "c:\\git\\project-encore\\stylishcombatstarterkit\\plugins\\stevesuehelpers\\intermediate\\build\\win64\\unrealeditor\\inc\\stevesuehelpers\\uht\\steveslightflicker.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

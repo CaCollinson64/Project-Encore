@@ -1,0 +1,23 @@
+[set DefaultCameraShot.MN-001 `BotCam`]
+[set DefaultCameraShot.Six `SixCam`]
+MN-001: Welcome to the Prototype Gym!
+MN-001: "Somebody" Couldn't finish a level on time...
+	So this is more of a...
+MN-001: Tech Gym!
+[event CameraTransition `SixCam`, 0.5, `EaseInOut`, 3]
+Six: I'll be damned. You guys can talk?
+[event CameraTransition `BotCam`, 0.5, `EaseInOut`, 3]
+MN-001: That's right!
+MN-001: Don't worry. There's combat at the end.
+[event CameraTransition `SixCam`, 0.5, `EaseInOut`, 3]
+Six: How are we doing this dialogue bit?
+[event CameraTransition `BotCam`, 0.5, `EaseInOut`, 3]
+MN-001: We're using SUDSPRO. 
+	It's a middleware that enables easy dialogue handling.
+MN-001: Did you notice for example...
+	The smooth camera transitions to defined cameras?
+MN-001: We can even set marks, trigger dialogue during Sequences..
+	Or play animations!
+Six: I have no clue what you're talking about.
+MN-001: Cool Hard Cut.
+Six: What?

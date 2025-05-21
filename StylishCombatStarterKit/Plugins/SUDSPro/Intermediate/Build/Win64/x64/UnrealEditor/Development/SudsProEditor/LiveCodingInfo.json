@@ -1,0 +1,9 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.SudsProEditor.cpp.obj": [
+			"PerModuleInline.gen.cpp.obj",
+			"SudsProEditor.cpp.obj"
+		]
+	}
+}

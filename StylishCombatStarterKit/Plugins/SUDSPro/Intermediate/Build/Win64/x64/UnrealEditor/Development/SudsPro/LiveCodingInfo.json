@@ -1,0 +1,42 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.SudsPro.cpp.obj": [
+			"SudsPro.init.gen.cpp.obj",
+			"SudsProAnimationProvider.gen.cpp.obj",
+			"SudsProCameraModifier.gen.cpp.obj",
+			"SudsProCameraShotProvider.gen.cpp.obj",
+			"SudsProCharacter.gen.cpp.obj",
+			"SudsProCommon.gen.cpp.obj",
+			"SudsProDialogueExtension.gen.cpp.obj",
+			"SudsProExtCameraTools.gen.cpp.obj",
+			"SudsProExtCharacterTools.gen.cpp.obj",
+			"SudsProExtSequenceTools.gen.cpp.obj",
+			"SudsProExtWait.gen.cpp.obj",
+			"SudsProLibrary.gen.cpp.obj",
+			"SudsProMarkProvider.gen.cpp.obj",
+			"SudsProQueuedEventHandler.gen.cpp.obj",
+			"SudsProRunner.gen.cpp.obj",
+			"SudsProSequenceProvider.gen.cpp.obj",
+			"SudsProSettings.gen.cpp.obj",
+			"SudsProSubsystem.gen.cpp.obj",
+			"SudsProUiLink.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
+			"SudsProCameraModifier.cpp.obj",
+			"SudsProCameraShotProvider.cpp.obj",
+			"SudsProExtCameraTools.cpp.obj",
+			"SudsProExtCharacterTools.cpp.obj",
+			"SudsProExtSequenceTools.cpp.obj",
+			"SudsProExtWait.cpp.obj",
+			"SudsPro.cpp.obj",
+			"SudsProCommon.cpp.obj",
+			"SudsProDialogueExtension.cpp.obj",
+			"SudsProLibrary.cpp.obj",
+			"SudsProMath.cpp.obj",
+			"SudsProRunner.cpp.obj",
+			"SudsProSettings.cpp.obj",
+			"SudsProSubsystem.cpp.obj",
+			"SudsProUiLink.cpp.obj"
+		]
+	}
+}

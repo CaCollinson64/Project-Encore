@@ -1,0 +1,27 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\git\\project-encore\\stylishcombatstarterkit\\plugins\\stevesuehelpers\\source\\stevesuehelpersed\\private\\stevesfixeddatatablecustomisationlayout.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\git\\project-encore\\stylishcombatstarterkit\\intermediate\\build\\win64\\x64\\stylishcombatstarterkiteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\git\\project-encore\\stylishcombatstarterkit\\plugins\\stevesuehelpers\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\stevesuehelpersed\\definitions.stevesuehelpersed.h",
+            "c:\\git\\project-encore\\stylishcombatstarterkit\\plugins\\stevesuehelpers\\source\\stevesuehelpersed\\private\\stevesfixeddatatablecustomisationlayout.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\editor\\unrealed\\public\\datatableeditorutils.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\editor\\unrealed\\public\\kismet2\\listenermanager.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\editor\\propertyeditor\\public\\detailwidgetrow.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\editor\\propertyeditor\\public\\idetailpropertyrow.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\editor\\propertyeditor\\public\\detailcategorybuilder.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\editor\\propertyeditor\\public\\idetailcustomnodebuilder.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\editor\\propertyeditor\\public\\detailbuildertypes.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\editor\\propertyeditor\\public\\propertyeditorcopypaste.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\editor\\propertyeditor\\public\\propertycustomizationhelpers.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\editor\\propertyeditor\\public\\sresettodefaultmenu.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\editor\\actorpickermode\\public\\actorpickermode.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\editor\\scenedepthpickermode\\public\\scenedepthpickermode.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\editor\\classviewer\\public\\classviewermodule.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

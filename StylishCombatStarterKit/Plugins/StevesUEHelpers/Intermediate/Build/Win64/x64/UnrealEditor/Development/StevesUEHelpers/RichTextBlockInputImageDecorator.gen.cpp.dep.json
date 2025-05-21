@@ -1,0 +1,21 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\git\\project-encore\\stylishcombatstarterkit\\plugins\\stevesuehelpers\\intermediate\\build\\win64\\unrealeditor\\inc\\stevesuehelpers\\uht\\richtextblockinputimagedecorator.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\git\\project-encore\\stylishcombatstarterkit\\intermediate\\build\\win64\\x64\\stylishcombatstarterkiteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\git\\project-encore\\stylishcombatstarterkit\\plugins\\stevesuehelpers\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\stevesuehelpers\\definitions.stevesuehelpers.h",
+            "c:\\git\\project-encore\\stylishcombatstarterkit\\plugins\\stevesuehelpers\\source\\stevesuehelpers\\public\\stevesui\\richtextblockinputimagedecorator.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\umg\\public\\components\\richtextblockdecorator.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\slate\\public\\framework\\text\\islaterun.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\slate\\public\\framework\\text\\ilayoutblock.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\slate\\public\\framework\\text\\irunrenderer.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\slate\\public\\framework\\text\\itextdecorator.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\richtextblockdecorator.generated.h",
+            "c:\\git\\project-encore\\stylishcombatstarterkit\\plugins\\stevesuehelpers\\intermediate\\build\\win64\\unrealeditor\\inc\\stevesuehelpers\\uht\\richtextblockinputimagedecorator.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

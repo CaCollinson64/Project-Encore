@@ -1,0 +1,36 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\git\\project-encore\\stylishcombatstarterkit\\plugins\\stevesuehelpers\\source\\stevesuehelpers\\private\\stevesui\\smoothchangingprogressbar.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\git\\project-encore\\stylishcombatstarterkit\\intermediate\\build\\win64\\x64\\stylishcombatstarterkiteditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\git\\project-encore\\stylishcombatstarterkit\\plugins\\stevesuehelpers\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\stevesuehelpers\\definitions.stevesuehelpers.h",
+            "c:\\git\\project-encore\\stylishcombatstarterkit\\plugins\\stevesuehelpers\\source\\stevesuehelpers\\public\\stevesui\\smoothchangingprogressbar.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\umg\\public\\components\\progressbar.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\slate\\public\\widgets\\notifications\\sprogressbar.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\slate\\uht\\sprogressbar.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\umg\\public\\components\\widget.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\umg\\public\\binding\\states\\widgetstatebitfield.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\widgetstatebitfield.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\fieldnotification\\public\\fieldnotificationdeclaration.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\fieldnotification\\public\\ifieldnotificationclassdescriptor.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\fieldnotification\\public\\inotifyfieldvaluechanged.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\fieldnotification\\uht\\inotifyfieldvaluechanged.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\umg\\public\\components\\visual.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\visual.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\umg\\public\\components\\slatewrappertypes.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\slatewrappertypes.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\umg\\public\\slate\\widgettransform.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\widgettransform.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\umg\\public\\blueprint\\widgetnavigation.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\slatecore\\public\\types\\navigationmetadata.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\widgetnavigation.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\widget.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\uht\\progressbar.generated.h",
+            "c:\\git\\project-encore\\stylishcombatstarterkit\\plugins\\stevesuehelpers\\intermediate\\build\\win64\\unrealeditor\\inc\\stevesuehelpers\\uht\\smoothchangingprogressbar.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

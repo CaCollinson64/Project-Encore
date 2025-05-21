@@ -1,0 +1,10 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.StevesUEHelpersEd.cpp.obj": [
+			"PerModuleInline.gen.cpp.obj",
+			"StevesFixedDataTableCustomisationLayout.cpp.obj",
+			"StevesUEHelpersEd.cpp.obj"
+		]
+	}
+}

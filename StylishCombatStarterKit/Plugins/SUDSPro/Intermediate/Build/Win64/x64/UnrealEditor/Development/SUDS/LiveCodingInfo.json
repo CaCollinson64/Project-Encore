@@ -1,0 +1,36 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.SUDS.cpp.obj": [
+			"SUDS.init.gen.cpp.obj",
+			"SUDSDialogue.gen.cpp.obj",
+			"SUDSExpression.gen.cpp.obj",
+			"SUDSLibrary.gen.cpp.obj",
+			"SUDSParticipant.gen.cpp.obj",
+			"SUDSScript.gen.cpp.obj",
+			"SUDSScriptEdge.gen.cpp.obj",
+			"SUDSScriptNode.gen.cpp.obj",
+			"SUDSScriptNodeEvent.gen.cpp.obj",
+			"SUDSScriptNodeGosub.gen.cpp.obj",
+			"SUDSScriptNodeSet.gen.cpp.obj",
+			"SUDSScriptNodeText.gen.cpp.obj",
+			"SUDSSubsystem.gen.cpp.obj",
+			"SUDSValue.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
+			"SUDS.cpp.obj",
+			"SUDSCommon.cpp.obj",
+			"SUDSDialogue.cpp.obj",
+			"SUDSExpression.cpp.obj",
+			"SUDSLibrary.cpp.obj",
+			"SUDSParticipant.cpp.obj",
+			"SUDSScript.cpp.obj",
+			"SUDSScriptEdge.cpp.obj",
+			"SUDSScriptNode.cpp.obj",
+			"SUDSScriptNodeEvent.cpp.obj",
+			"SUDSScriptNodeSet.cpp.obj",
+			"SUDSScriptNodeText.cpp.obj",
+			"SUDSSubsystem.cpp.obj",
+			"SUDSValue.cpp.obj"
+		]
+	}
+}

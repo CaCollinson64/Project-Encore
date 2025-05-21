@@ -1,0 +1,22 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.SUDSEditor.cpp.obj": [
+			"SUDSEditor.init.gen.cpp.obj",
+			"SUDSEditorSettings.gen.cpp.obj",
+			"SUDSScriptFactory.gen.cpp.obj",
+			"SUDSScriptReimportFactory.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
+			"SUDSEditor.cpp.obj",
+			"SUDSEditorScriptTools.cpp.obj",
+			"SUDSEditorSettings.cpp.obj",
+			"SUDSEditorToolkit.cpp.obj",
+			"SUDSEditorVoiceOverTools.cpp.obj",
+			"SUDSMessageLogger.cpp.obj",
+			"SUDSScriptActions.cpp.obj",
+			"SUDSScriptFactory.cpp.obj",
+			"SUDSScriptImporter.cpp.obj",
+			"SUDSScriptReimportFactory.cpp.obj"
+		]
+	}
+}
